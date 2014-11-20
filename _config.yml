@@ -1,0 +1,10 @@
+# Site settings
+title: GNaP Docs
+email: dotnet@infrabel.be
+description: "The official GNaP documentation"
+baseurl: ""
+url: "http://gnap-web-themes-docs.azurewebsites.net"
+
+# Build settings
+markdown: kramdown
+permalink: pretty

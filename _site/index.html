@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting Started</title>
+    <meta name="description" content="The official GNaP documentation">
+    <link rel="canonical" href="http://gnap-web-themes-docs.azurewebsites.net/">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-group">
+      <a href="/" class="list-group-item active">Getting Started</a>
+      <a href="/application-structure" class="list-group-item ">Application structure</a>
+      <a href="/configuring-your-application" class="list-group-item ">Configuring your application</a>
+      <a href="/states-controllers-views" class="list-group-item ">States, controllers &amp; views</a>
+      <a href="/working-with-a-rest-api" class="list-group-item ">Working with a REST API</a>
+      <a href="/authenticating-using-a-jwt-token" class="list-group-item ">Authenticating using a JWT token</a>
+      <a href="/internationalization" class="list-group-item ">Internationalization (I18n)</a>
+      <a href="/validating-user-input" class="list-group-item ">Validating user input</a>
+      <a href="/error-handling" class="list-group-item ">Error handling</a>
+      <a href="/putting-your-application-in-production" class="list-group-item ">Putting your application in production</a>
+      <a href="/troubleshooting-your-application" class="list-group-item ">Troubleshooting your application</a>
+      <a href="/advanced-topics" class="list-group-item ">Advanced topics</a>
+</div>
+        </div>
+        <div class="col-md-8 col-md-offset-1 ">
+          <div class="article">
+
+  <header class="article-header">
+    <h1>Getting Started</h1>
+  </header>
+
+  <article class="article-content">
+  <div class="alert alert-success" role="alert">
+    GNaP.Web.Themes is a high-productivity single page application toolset that integrates the components and APIs you need for modern web application development.
+</div>
+
+<h2 id="building-single-page-apps-made-easy">Building single page apps made easy</h2>
+
+<p>While single page applications (SPA) are becoming more popular every day they can be time consuming and tricky to setup. We have created a skeleton which you can use to quickly start building a SPA. We have carefully hand-picked some of the best libraries (to our taste) and worked out a starting point for building a SPA.</p>
+
+<p>When building <a href="https://github.com/infrabel/GNaP.Web.Themes">GNaP.Web.Themes</a> we set out to create a robust and opinionated client-side stack, using tools and frameworks that can help you quickly build beautiful single page applications. We take care of providing everything needed to get started without any of the normal headaches associated with a manual setup.</p>
+
+<p>The different aspects we have touched are:</p>
+
+<ul>
+  <li>Bootstrapping and configuring an Angular application</li>
+  <li>Working with states, controllers and views</li>
+  <li>Talking to a REST API</li>
+  <li>Validating user input</li>
+  <li>Authenticating against a JWT token service</li>
+  <li>Internationalization (I18n)</li>
+  <li>Error handling</li>
+</ul>
+
+<h2 id="setting-up-your-development-environment">Setting up your development environment</h2>
+
+<p>Before you can start building webapps using GNaP.Web.Themes you first need to prepare your development environment. The main requirements are NPM and Yeoman.</p>
+
+<h3 id="installing-npm">Installing NPM</h3>
+
+<p>NPM is the Node Package Manager. It comes installed with <a href="http://nodejs.org">NodeJS</a>. You’ll use it to download and install the dependencies for GNaP.Web.Themes.</p>
+
+<p>On Windows:</p>
+
+<ul>
+  <li>To install using Chocolatey:</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">cinst nodejs.install</code></pre></div>
+
+<ul>
+  <li>Alternatively you can <a href="http://nodejs.org/download/">download the Windows installer</a>.</li>
+</ul>
+
+<p>On OS X:</p>
+
+<p>On Linux:</p>
+
+<h3 id="installing-yeoman">Installing Yeoman</h3>
+
+<p>For generating things we’re resorting to <a href="http://yeoman.io/">Yeoman</a>: The web’s scaffolding tool for modern webapps. Using the generators we created you can quickly setup client-side web application without having to rethink all the possible framework and library options.</p>
+
+<p>To install Yeoman from npm, run:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">npm install --global yo bower grunt-cli</code></pre></div>
+
+<p>You now should have Yo, Bower and Grunt installed on your development machine. To verify that the installation went well you can run the following command:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">yo --version &amp;&amp; bower --version &amp;&amp; grunt --version</code></pre></div>
+
+<p>Now that you have Yeoman setup we can install the GNaP Angular generator:</p>
+
+<p>To install <a href="(https://www.npmjs.org/package/generator-gnap-angular)">generator-gnap-angular</a> from npm, run:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">npm install -g generator-gnap-angular</code></pre></div>
+
+<h2 id="generating-your-first-app">Generating your first app</h2>
+
+<p>Run the GNaP Angular generator:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">yo gnap-angular</code></pre></div>
+
+<p>You’re now greeted by Yeoman who will guide you through the rest of the scaffolding process.</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">_-----_
+    |       |    .--------------------------.
+    |--(o)--|    |      Welcome to the      |
+   `---------´   |     outstanding GNaP     |
+    ( _´U`_ )    |        generator!        |
+    /___A___\    &#39;--------------------------&#39;
+     |  ~  |     
+   __&#39;.___.&#39;__   
+ ´   `  |° ´ Y `</code></pre></div>
+
+<p>First you need to enter the project name of your application. This will be used as the AngularJS module name for your application. We recommend using a name that is all lower case and uses a hyphen as the word separator. Avoid spaces and other special characters.</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">? What is the project name of your application? todo-list</code></pre></div>
+
+<p>Next the generator will prompt you to enter a title for your app. The title you enter will be used as the default title for pages in your webapp.</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">? What is the title of your application? Todo List</code></pre></div>
+
+<p>You’re now ready to select the theme to use for your webapp. Select one by using the arrow keys and confirm your selection by pressing enter.</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">? Which theme does your application use? (Use arrow keys)
+❯ GNaP.Themes.Web.GNaP.Angular</code></pre></div>
+
+<p>Finally you need to enter the port that the development HTTP server will run on. Leave this field empty and press enter to use the default port (9000).</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">? Which port should the development server run on? (9000)</code></pre></div>
+
+<p>Now <em>yo</em> will start scaffolding your webapp and download its dependencies.</p>
+
+<p>Once <em>yo</em> has finished generating your webapp you can see it by running the following command:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">grunt serve</code></pre></div>
+
+<p>You can now start customizing your webapp! Since the generator configured the grunt serve task to use <em>livereload</em>, changes you make to the source code will immediately show in your browser.</p>
+
+<p>Happy programming!</p>
+
+<nav>
+  <ul class="pager">
+    <li class="next"><a href="/application-structure">Application structure <span aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+</nav>
+
+  </article>
+
+</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
