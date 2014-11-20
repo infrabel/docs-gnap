@@ -54,6 +54,8 @@
   <p>AngularUI Router is a routing framework for AngularJS, which allows you to organize the parts of your interface into a state machine. Unlike the $route service in the Angular ngRoute module, which is organized around URL routes, UI-Router is organized around states, which may optionally have routes, as well as other behavior, attached.</p>
 </blockquote>
 
+<p>AngularUI Router provides a different approach than ngRoute in that it changes your application views based on state of the application and not just the route URL. Instead of thinking about a URL and the view that is displayed by that URL, AngularUI Router forces you to think about what state your application is in when visiting a URL. This way you can have nested states so that there’s less clutter in your controllers. If for example you would need to show a breadcrumb you would create multiple nested states that each add to the breadcrumb. This is a much more DRY approach than repeating breadcrumb additions in all controllers.</p>
+
 <p>Read more about states and UI Router at the <a href="https://github.com/angular-ui/ui-router">AngularUI Router GitHub Repo</a></p>
 
 <blockquote>
@@ -66,29 +68,139 @@
 
 <p>Start by invoking <em>yo</em> like this:</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">yo gnap-angular:state main.dashboard</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">yo gnap-angular:state main.todos</code></pre></div>
 
 <p>Next the generator will prompt you to enter the url of your state. This is the url that the users of your application will visit to view your state. You can leave this blank if you’re happy with the proposed url. Press enter to confirm your input.</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">? What is the url of the state? (/dashboard)</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">? What is the url of the state? (/todos)</code></pre></div>
 
 <p>You can now enter the localized title texts.</p>
 
-<div class="highlight"><pre><code class="language-text" data-lang="text">? What is the *english* title of the state? Dashboard
-? What is the *dutch* title of the state? Dashboard
-? What is the *french* title of the state? Dashboard</code></pre></div>
+<div class="highlight"><pre><code class="language-text" data-lang="text">? What is the *english* title of the state? Todo List
+? What is the *dutch* title of the state? Takenlijst
+? What is the *french* title of the state? Liste des tâches</code></pre></div>
 
 <p>If the state should show up in the sidebar of your application then answer <em>y</em> to the following question.</p>
 
 <div class="highlight"><pre><code class="language-text" data-lang="text">? Should the state show up in the sidebar? (y/N) y</code></pre></div>
 
-<p>The state generator will now start scaffolding. If you’re still running <code>grunt serve</code> then the new state should immediately be available in your browser.</p>
+<p>The state generator will now start scaffolding. After it has completed its work your application has the following new files:</p>
+
+<pre><code>src/
+--- app/
+------- main/
+----------- todos/
+--------------- todos.state.js
+--------------- todos.controller.js
+--------------- todos.html
+--------------- translations.en.json
+--------------- translations.fr.json
+--------------- translations.nl.json
+</code></pre>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>todos.state.js</td>
+      <td>The state configuration file. Contains information about URL, controller and view.</td>
+    </tr>
+    <tr>
+      <td>todos.controller.js</td>
+      <td>Class that adds values and functions to the scope for use in the view</td>
+    </tr>
+    <tr>
+      <td>todos.html</td>
+      <td>The view template</td>
+    </tr>
+    <tr>
+      <td>translations.en.json</td>
+      <td>The english translations</td>
+    </tr>
+    <tr>
+      <td>translations.fr.json</td>
+      <td>The french translations</td>
+    </tr>
+    <tr>
+      <td>translations.nl.json</td>
+      <td>The dutch translations</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If you’re still running <code>grunt serve</code> then the new state should immediately be available in your browser.</p>
+
+<h2 id="configuring-the-state">Configuring the state</h2>
+
+<p>Now that your state has been created we can start configuring it. In the scaffolded state file you’ll find a stateSettings variable that contains all the configuration settings.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">stateSettings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;main.todos&#39;</span><span class="p">,</span>
+    <span class="nx">state</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;/todos&#39;</span><span class="p">,</span>
+        <span class="nx">templateUrl</span><span class="o">:</span> <span class="s1">&#39;app/main/todos/todos.html&#39;</span><span class="p">,</span>
+        <span class="nx">controller</span><span class="o">:</span> <span class="s1">&#39;MainTodosController as vm&#39;</span>
+    <span class="p">},</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">textTranslationId</span><span class="o">:</span> <span class="s1">&#39;main.todos.title&#39;</span>
+    <span class="p">},</span>
+    <span class="nx">breadcrumb</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">titleTranslationId</span><span class="o">:</span> <span class="s1">&#39;main.todos.breadcrumb&#39;</span>
+    <span class="p">},</span>
+    <span class="nx">sidebarKey</span><span class="o">:</span> <span class="s1">&#39;main.todos&#39;</span><span class="p">,</span>
+    <span class="nx">translations</span><span class="o">:</span> <span class="s1">&#39;app/main/todos&#39;</span>
+<span class="p">};</span></code></pre></div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Setting</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>The state name. Nested states are separated by a dot (.)</td>
+    </tr>
+    <tr>
+      <td>state.url</td>
+      <td>The URL that this state is located at. When users browse to this URL in your application, the state (and its parent states) will be loaded.</td>
+    </tr>
+    <tr>
+      <td>state.templateUrl</td>
+      <td>The path to to view template.</td>
+    </tr>
+    <tr>
+      <td>state.controller</td>
+      <td>The controller for this state.</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>The state title that is displayed as the title of the current browser window. This can either contain a <em>text</em> attribute that contains the text to display, or a  <em>textTranslationId</em> attribute that points to the translated value to display. For more information about the <em>textTranslationId</em> attribute see <a href="/internationalization">Internationalization (I18n)</a>.</td>
+    </tr>
+    <tr>
+      <td>breadcrumb</td>
+      <td>The breadcrumb to display for this state. This can either contain a <em>title</em> attribute that contains the text to display, or a  <em>titleTranslationId</em> attribute that points to the translated value to display. For more information about the <em>titleTranslationId</em> attribute see <a href="/internationalization">Internationalization (I18n)</a>.</td>
+    </tr>
+    <tr>
+      <td>sidebarKey</td>
+      <td>The key of the sidebar item that should be set active when this state is currently being displayed.</td>
+    </tr>
+  </tbody>
+</table>
 
 <nav>
   <ul class="pager">
     <li class="next"><a href="/working-with-a-rest-api">Working with a REST API <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>
+
 
   </article>
 
