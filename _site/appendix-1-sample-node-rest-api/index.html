@@ -59,7 +59,7 @@
 
 <div class="highlight"><pre><code class="language-text" data-lang="text">npm install restify</code></pre></div>
 
-<p>Next you can start writing your NodeJS server. The following example server returns a list of todos when requesting http://localhost:8080/todos </p>
+<p>Next you can start writing your NodeJS server. Create a file named <code>app.js</code> and paste the following code in it:</p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">restify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;restify&#39;</span><span class="p">);</span>
 
@@ -75,6 +75,32 @@
 <span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8080</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;listening at %s&#39;</span><span class="p">,</span> <span class="nx">server</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
 <span class="p">});</span></code></pre></div>
+
+<p>Run your server using the following command:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">node app.js</code></pre></div>
+
+<p>Navigate to http://localhost:8080/todos using your browser. The server will return a list of todos in JSON format.</p>
+
+<h2 id="enable-cors-cross-origin-resource-sharing">Enable CORS (Cross Origin Resource Sharing)</h2>
+
+<p>Because of the <a href="http://en.wikipedia.org/wiki/Same-origin_policy">same origin policy</a> a browser will not allow a site hosted on http://my-domain.com to fetch data from an API hosted on http://other-domain.com. However, by supporting <a href="http://www.w3.org/TR/cors/">Cross Origin Resource Sharing (CORS)</a> requests, other-domain.com can add a few special response headers that allows my-domain.com to access the data.</p>
+
+<p>Read more about CORS on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Mozilla Developer Network</a></p>
+
+<p>We can enable CORS on our sample server by adding the following middleware just after <code>var server = restify.createServer();</code>:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">server</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span>
+  <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">){</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">header</span><span class="p">(</span><span class="s2">&quot;Access-Control-Allow-Origin&quot;</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">header</span><span class="p">(</span><span class="s2">&quot;Access-Control-Allow-Headers&quot;</span><span class="p">,</span> <span class="s2">&quot;X-Requested-With&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nx">next</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">);</span></code></pre></div>
+
+<blockquote>
+  <p>WARNING: The above code fragment is not safe as it doesn’t restrict on the origin of the HTTP request. Replace the value of the Access-Control-Allow-Origin header with the domain you want to allow access.</p>
+</blockquote>
 
   </article>
 
