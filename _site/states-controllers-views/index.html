@@ -141,20 +141,20 @@
 <p>Now that your state has been created we can start configuring it. In the scaffolded state file you’ll find a stateSettings variable that contains all the configuration settings.</p>
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">stateSettings</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;main.todos&#39;</span><span class="p">,</span>
-    <span class="nx">state</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;/todos&#39;</span><span class="p">,</span>
-        <span class="nx">templateUrl</span><span class="o">:</span> <span class="s1">&#39;app/main/todos/todos.html&#39;</span><span class="p">,</span>
-        <span class="nx">controller</span><span class="o">:</span> <span class="s1">&#39;MainTodosController as vm&#39;</span>
+    <span class="na">name</span><span class="p">:</span> <span class="s1">'main.todos'</span><span class="p">,</span>
+    <span class="na">state</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">url</span><span class="p">:</span> <span class="s1">'/todos'</span><span class="p">,</span>
+        <span class="na">templateUrl</span><span class="p">:</span> <span class="s1">'app/main/todos/todos.html'</span><span class="p">,</span>
+        <span class="na">controller</span><span class="p">:</span> <span class="s1">'MainTodosController as vm'</span>
     <span class="p">},</span>
-    <span class="nx">title</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">textTranslationId</span><span class="o">:</span> <span class="s1">&#39;main.todos.title&#39;</span>
+    <span class="na">title</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">textTranslationId</span><span class="p">:</span> <span class="s1">'main.todos.title'</span>
     <span class="p">},</span>
-    <span class="nx">breadcrumb</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">titleTranslationId</span><span class="o">:</span> <span class="s1">&#39;main.todos.breadcrumb&#39;</span>
+    <span class="na">breadcrumb</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">titleTranslationId</span><span class="p">:</span> <span class="s1">'main.todos.breadcrumb'</span>
     <span class="p">},</span>
-    <span class="nx">sidebarKey</span><span class="o">:</span> <span class="s1">&#39;main.todos&#39;</span><span class="p">,</span>
-    <span class="nx">translations</span><span class="o">:</span> <span class="s1">&#39;app/main/todos&#39;</span>
+    <span class="na">sidebarKey</span><span class="p">:</span> <span class="s1">'main.todos'</span><span class="p">,</span>
+    <span class="na">translations</span><span class="p">:</span> <span class="s1">'app/main/todos'</span>
 <span class="p">};</span></code></pre></div>
 
 <table class="table">
@@ -203,6 +203,8 @@
 <h2 id="loading-data-for-a-state">Loading data for a state</h2>
 
 <p>Usually you will want to display some data on a state. You can load this data in the controller but then your view will briefly show an empty list until the data is fully loaded. AngularUI Router has a way of pre-loading data so you can prevent this from happening. </p>
+
+<p>test</p>
 
 <nav>
   <ul class="pager">

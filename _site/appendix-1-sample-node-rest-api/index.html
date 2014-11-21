@@ -61,19 +61,19 @@
 
 <p>Next you can start writing your NodeJS server. Create a file named <code>app.js</code> and paste the following code in it:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">restify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;restify&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">restify</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'restify'</span><span class="p">);</span>
 
 <span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">restify</span><span class="p">.</span><span class="nx">createServer</span><span class="p">();</span>
 
-<span class="nx">server</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/todos&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">server</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/todos'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">([{</span>
-        <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;Buy milk&#39;</span>
+        <span class="na">title</span><span class="p">:</span> <span class="s1">'Buy milk'</span>
     <span class="p">}]);</span>
     <span class="k">return</span> <span class="nx">next</span><span class="p">();</span>
 <span class="p">});</span>
 
 <span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">8080</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;listening at %s&#39;</span><span class="p">,</span> <span class="nx">server</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'listening at %s'</span><span class="p">,</span> <span class="nx">server</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
 <span class="p">});</span></code></pre></div>
 
 <p>Run your server using the following command:</p>
@@ -92,8 +92,8 @@
 
 <div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">server</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span>
   <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">){</span>
-    <span class="nx">res</span><span class="p">.</span><span class="nx">header</span><span class="p">(</span><span class="s2">&quot;Access-Control-Allow-Origin&quot;</span><span class="p">,</span> <span class="s2">&quot;*&quot;</span><span class="p">);</span>
-    <span class="nx">res</span><span class="p">.</span><span class="nx">header</span><span class="p">(</span><span class="s2">&quot;Access-Control-Allow-Headers&quot;</span><span class="p">,</span> <span class="s2">&quot;X-Requested-With&quot;</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">header</span><span class="p">(</span><span class="s2">"Access-Control-Allow-Origin"</span><span class="p">,</span> <span class="s2">"*"</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">header</span><span class="p">(</span><span class="s2">"Access-Control-Allow-Headers"</span><span class="p">,</span> <span class="s2">"X-Requested-With"</span><span class="p">);</span>
     <span class="k">return</span> <span class="nx">next</span><span class="p">();</span>
   <span class="p">}</span>
 <span class="p">);</span></code></pre></div>

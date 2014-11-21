@@ -73,7 +73,7 @@ Content-Length: nnn</code></pre></div>
 <div class="highlight"><pre><code class="language-text" data-lang="text">Content-Length: nnn
 Content-Type: application/json; charset=utf-8
 
-{ ticker-symbol: &#39;IBM&#39;, &#39;stock-price&#39;: 34.5 }</code></pre></div>
+{ ticker-symbol: 'IBM', 'stock-price': 34.5 }</code></pre></div>
 
 <blockquote>
   <p>cURL is a command line tool for transferring data with URL syntax, supporting the HTTP protocol. It comes in handy as a tool for testing a web API from the command line. It is installed by default on OS X and most Linux distros. If you’re on Windows you need to install it manually. Learn more at <a href="http://curl.haxx.se">http://curl.haxx.se</a></p>
@@ -83,23 +83,23 @@ Content-Type: application/json; charset=utf-8
 
 <p>Angular has built-in support for talking with a REST web API through the <a href="https://docs.angularjs.org/api/ngResource/service/$resource">ngResource</a> module. Although you can use the <code>$resource</code> service directly in your controllers it’s better to create a custom service for each of the resources you need to communicate with. This way the configuration of the resource is done in your custom service and can be changed in one location if needed.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">'use strict'</span><span class="p">;</span>
 
 <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="nx">angular</span>
-        <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;todo-app&#39;</span><span class="p">)</span>
-        <span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="s1">&#39;Todo&#39;</span><span class="p">,</span> <span class="nx">Todo</span><span class="p">);</span>
+        <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'todo-app'</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">factory</span><span class="p">(</span><span class="s1">'Todo'</span><span class="p">,</span> <span class="nx">Todo</span><span class="p">);</span>
 
-    <span class="nx">Todo</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$resource&#39;</span><span class="p">];</span>
+    <span class="nx">Todo</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'$resource'</span><span class="p">];</span>
 
     <span class="kd">function</span> <span class="nx">Todo</span><span class="p">(</span><span class="nx">$resource</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nx">$resource</span><span class="p">(</span><span class="s1">&#39;/api/todos&#39;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nx">$resource</span><span class="p">(</span><span class="s1">'/api/todos'</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">})();</span></code></pre></div>
 
 <p>You can then query for a todo like this:</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Todo</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="nx">id</span><span class="o">:</span><span class="mi">123</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">todo</span><span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">Todo</span><span class="p">.</span><span class="nx">get</span><span class="p">({</span><span class="na">id</span><span class="p">:</span><span class="mi">123</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">todo</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// do something with the todo item</span>
 <span class="p">});</span></code></pre></div>
 

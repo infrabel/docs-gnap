@@ -8,3 +8,7 @@ url: "http://gnap-web-themes-docs.azurewebsites.net"
 # Build settings
 markdown: kramdown
 permalink: pretty
+highlighter: rouge
+
+kramdown:
+  input: GFM

@@ -99,49 +99,49 @@
 
 <p>Configures your application module and declares the modules to import.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">'use strict'</span><span class="p">;</span>
 
 <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="nx">angular</span>
-        <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;gnap-web-themes-docs&#39;</span><span class="p">,</span> 
-                <span class="p">[</span><span class="s1">&#39;gnap&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;ngSanitize&#39;</span><span class="p">,</span>
-                 <span class="s1">&#39;ngResource&#39;</span><span class="p">]);</span>
+        <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'gnap-web-themes-docs'</span><span class="p">,</span> 
+                <span class="p">[</span><span class="s1">'gnap'</span><span class="p">,</span>
+                 <span class="s1">'ngSanitize'</span><span class="p">,</span>
+                 <span class="s1">'ngResource'</span><span class="p">]);</span>
 <span class="p">})();</span></code></pre></div>
 
 <h2 id="appconfigjs">app.config.js</h2>
 
 <p>Configures your application. Write your module run and config functions here to configure your application.</p>
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">'use strict'</span><span class="p">;</span>
 
 <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
     <span class="nx">angular</span>
-        <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;gnap-web-themes-docs&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'gnap-web-themes-docs'</span><span class="p">)</span>
         <span class="p">.</span><span class="nx">config</span><span class="p">(</span><span class="nx">titleConfiguration</span><span class="p">)</span>
         <span class="p">.</span><span class="nx">config</span><span class="p">(</span><span class="nx">urlRouterConfiguration</span><span class="p">)</span>
         <span class="p">.</span><span class="nx">config</span><span class="p">(</span><span class="nx">authConfiguration</span><span class="p">)</span>
         <span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">handleStateChangeError</span><span class="p">);</span>
 
-    <span class="nx">titleConfiguration</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;titleServiceProvider&#39;</span><span class="p">];</span>
+    <span class="nx">titleConfiguration</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'titleServiceProvider'</span><span class="p">];</span>
 
     <span class="kd">function</span> <span class="nx">titleConfiguration</span><span class="p">(</span><span class="nx">titleServiceProvider</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// title configuration goes here</span>
     <span class="p">}</span>
 
-    <span class="nx">urlRouterConfiguration</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$urlRouterProvider&#39;</span><span class="p">];</span>
+    <span class="nx">urlRouterConfiguration</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'$urlRouterProvider'</span><span class="p">];</span>
 
     <span class="kd">function</span> <span class="nx">urlRouterConfiguration</span><span class="p">(</span><span class="nx">$urlRouterProvider</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// url router configuration goes here</span>
     <span class="p">}</span>
 
-    <span class="nx">authConfiguration</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$httpProvider&#39;</span><span class="p">];</span>
+    <span class="nx">authConfiguration</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'$httpProvider'</span><span class="p">];</span>
 
     <span class="kd">function</span> <span class="nx">authConfiguration</span><span class="p">(</span><span class="nx">$httpProvider</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// auth configuration goes here</span>
     <span class="p">}</span>
 
-    <span class="nx">handleStateChangeError</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$rootScope&#39;</span><span class="p">,</span> <span class="s1">&#39;$state&#39;</span><span class="p">,</span> <span class="s1">&#39;$location&#39;</span><span class="p">,</span> <span class="s1">&#39;sessionService&#39;</span><span class="p">,</span> <span class="s1">&#39;unhandledErrorChannel&#39;</span><span class="p">];</span>
+    <span class="nx">handleStateChangeError</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'$rootScope'</span><span class="p">,</span> <span class="s1">'$state'</span><span class="p">,</span> <span class="s1">'$location'</span><span class="p">,</span> <span class="s1">'sessionService'</span><span class="p">,</span> <span class="s1">'unhandledErrorChannel'</span><span class="p">];</span>
 
     <span class="kd">function</span> <span class="nx">handleStateChangeError</span><span class="p">(</span><span class="nx">$rootScope</span><span class="p">,</span> <span class="nx">$state</span><span class="p">,</span> <span class="nx">$location</span><span class="p">,</span> <span class="nx">sessionService</span><span class="p">,</span> <span class="nx">unhandledErrorChannel</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// handle state change errors here</span>
