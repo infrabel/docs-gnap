@@ -106,12 +106,6 @@ var stateSettings = {
 | sidebarKey | The key of the sidebar item that should be set active when this state is currently being displayed. |
 | translations | The base url of the translation files. The URL for a specific translation file is constructed as follows: *{translations}*/translations.*{lang}*.json |
 
-## Loading data for a state
-
-Usually you will want to display some data on a state. You can load this data in the controller but then your view will briefly show an empty list until the data is fully loaded. AngularUI Router has a way of pre-loading data so you can prevent this from happening. 
-
-test
-
 <nav>
   <ul class="pager">
     <li class="next"><a href="/working-with-a-rest-api">Working with a REST API <span aria-hidden="true">&rarr;</span></a></li>

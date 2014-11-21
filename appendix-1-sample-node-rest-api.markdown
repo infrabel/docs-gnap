@@ -7,13 +7,13 @@ sidebar: appendix-1-sample-node-rest-api
 Start by creating a new folder on your local disk.
 
 {% highlight text %}
-mkdir todo-app
+mkdir todo-api
 {% endhighlight %}
 
 Open the folder you just created.
 
 {% highlight text %}
-cd todo-app
+cd todo-api
 {% endhighlight %}
 
 Install [restify](http://mcavage.github.com/node-restify), a smallish framework, similar to express for building REST APIs. For full details, see [http://mcavage.github.com/node-restify](http://mcavage.github.com/node-restify).
