@@ -36,6 +36,7 @@
       <a href="/putting-your-application-in-production" class="list-group-item ">Putting your application in production</a>
       <a href="/troubleshooting-your-application" class="list-group-item ">Troubleshooting your application</a>
       <a href="/advanced-topics" class="list-group-item ">Advanced topics</a>
+      <a href="/appendix-1-sample-node-rest-api" class="list-group-item ">Appendix 1: Sample node REST API</a>
 </div>
         </div>
         <div class="col-md-8 col-md-offset-1 ">
@@ -178,7 +179,7 @@
     </tr>
     <tr>
       <td>state.controller</td>
-      <td>The controller for this state.</td>
+      <td>The controller for this state. Note that we’re using the controllerAs syntax. See <a href="https://docs.angularjs.org/api/ng/directive/ngController">ngController</a> to find out more about using this syntax.</td>
     </tr>
     <tr>
       <td>title</td>
@@ -192,8 +193,16 @@
       <td>sidebarKey</td>
       <td>The key of the sidebar item that should be set active when this state is currently being displayed.</td>
     </tr>
+    <tr>
+      <td>translations</td>
+      <td>The base url of the translation files. The URL for a specific translation file is constructed as follows: <em>{translations}</em>/translations.<em>{lang}</em>.json</td>
+    </tr>
   </tbody>
 </table>
+
+<h2 id="loading-data-for-a-state">Loading data for a state</h2>
+
+<p>Usually you will want to display some data on a state. You can load this data in the controller but then your view will briefly show an empty list until the data is fully loaded. AngularUI Router has a way of pre-loading data so you can prevent this from happening. </p>
 
 <nav>
   <ul class="pager">

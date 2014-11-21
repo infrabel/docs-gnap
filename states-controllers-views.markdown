@@ -100,10 +100,15 @@ var stateSettings = {
 | name | The state name. Nested states are separated by a dot (.) |
 | state.url | The URL that this state is located at. When users browse to this URL in your application, the state (and its parent states) will be loaded. |
 | state.templateUrl | The path to to view template. |
-| state.controller | The controller for this state. |
+| state.controller | The controller for this state. Note that we're using the controllerAs syntax. See [ngController](https://docs.angularjs.org/api/ng/directive/ngController) to find out more about using this syntax.|
 | title | The state title that is displayed as the title of the current browser window. This can either contain a *text* attribute that contains the text to display, or a  *textTranslationId* attribute that points to the translated value to display. For more information about the *textTranslationId* attribute see [Internationalization (I18n)](/internationalization). |
 | breadcrumb | The breadcrumb to display for this state. This can either contain a *title* attribute that contains the text to display, or a  *titleTranslationId* attribute that points to the translated value to display. For more information about the *titleTranslationId* attribute see [Internationalization (I18n)](/internationalization).|
 | sidebarKey | The key of the sidebar item that should be set active when this state is currently being displayed. |
+| translations | The base url of the translation files. The URL for a specific translation file is constructed as follows: *{translations}*/translations.*{lang}*.json |
+
+## Loading data for a state
+
+Usually you will want to display some data on a state. You can load this data in the controller but then your view will briefly show an empty list until the data is fully loaded. AngularUI Router has a way of pre-loading data so you can prevent this from happening. 
 
 <nav>
   <ul class="pager">

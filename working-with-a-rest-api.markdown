@@ -68,6 +68,8 @@ Todo.get({id:123}, function(todo) {
 });
 {% endhighlight %}
 
+> Note: we've included a sample REST API written in node. See [Appendix 1: Sample node REST API](/appendix-1-sample-node-rest-api)
+
 <nav>
   <ul class="pager">
     <li class="next"><a href="/authenticating-using-a-jwt-token">Authenticating using a JWT token <span aria-hidden="true">&rarr;</span></a></li>
