@@ -8,7 +8,7 @@ url: "http://infrabel.github.io/docs-gnap"
 # Build settings
 markdown: kramdown
 permalink: pretty
-highlighter: rouge
+# highlighter: rouge
 
 kramdown:
   input: GFM
