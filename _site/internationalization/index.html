@@ -99,7 +99,23 @@
 
 <p>GNaP.Web.Angular has a built-in locale detection mechanism. If a user hasn’t yet selected a locale then the browser language is used as the default locale. The locale selection is stored in local storage so that the next time a user visits your application, the previously selected locale will be used.</p>
 
-<p>The <a href="https://github.com/infrabel/GNaP.Web.Themes/blob/ca95ab7f2cb55e7405c492bc43d43269eec9aac5/custom/gnap-angular/js/develop/gnap/locale-selector.directive.js">locale-selector</a> directive allows users to select a locale from a drop down list. If you’ve scaffolded your application then it should be located in the nav bar by default.</p>
+<p>The <a href="https://github.com/infrabel/GNaP.Web.Themes/blob/ca95ab7f2cb55e7405c492bc43d43269eec9aac5/custom/gnap-angular/js/develop/gnap/locale-selector.directive.js">locale-selector</a> directive allows users to select a locale from a drop down list. If you’ve scaffolded your application then it should be located in the navbar by default.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar navbar-default"</span> <span class="na">id=</span><span class="s">"navbar"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-container"</span> <span class="na">id=</span><span class="s">"navbar-container"</span><span class="nt">&gt;</span>
+
+        ...
+        
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navbar-header pull-right"</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav ace-nav"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">gnap-locale-selector</span> <span class="na">class=</span><span class="s">"light-blue"</span><span class="nt">&gt;&lt;/li&gt;</span>
+                
+                ...
+
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <p>Programmatically setting the locale can be done using the <a href="https://github.com/infrabel/GNaP.Web.Themes/blob/61ecd0a82c6156a8d995f6aea75e33c4c3e97bc7/custom/gnap-angular/js/develop/gnap/locale.service.js">locale service</a> more specifically through the use of the setCurrentLocale function. Note that this function will trigger a reload of your application.</p>
 
