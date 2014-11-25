@@ -42,7 +42,7 @@ Content-Type: application/json; charset=utf-8
 
 ## Adding a resource to your application
 
-Angular has built-in support for talking with a REST web API through the [ngResource](https://docs.angularjs.org/api/ngResource/service/$resource) module. Although you can use the `$resource` service directly in your controllers it's better to create a custom service for each of the resources you need to communicate with. This way the configuration of the resource is done in your custom service and can be changed in one location if needed.
+Angular has built-in support for talking with a REST web API through the [ngResource](https://docs.angularjs.org/api/ngResource/service/$resource) module. Although you can use the `$resource` service directly in your controllers it's better to create a custom service for each of the resources you need to communicate with. This way the configuration of the resource is done in your custom service and can be changed in one location if needed. 
 
 {% highlight javascript %}
 'use strict';
@@ -64,13 +64,88 @@ You can then query for a todo like this:
 
 {% highlight javascript %}
 Todo.get({id:123}, function(todo) {
-  // do something with the todo item
+    // do something with the todo item
 });
+{% endhighlight %}
+
+> Note: we've included a sample REST API written in node. See [Appendix 1: Sample node REST API](/appendix-1-sample-node-rest-api)
+
+## Using the resource in a state
+
+Usually you will want to display some data on a state. You can load this data in the controller but then your view will briefly show an empty list until the data is fully loaded. AngularUI Router has a way of pre-loading data so you can prevent this from happening.
+
+{% highlight javascript %}
+var stateSettings = {
+
+    /* ... */
+
+    state: {
+        
+        /* ... */
+
+        // Add this to your state to pre-load data before the view is processed:
+        resolve: {
+            todos: loadTodos
+        }
+
+    }
+    
+    /* ... */
+};
+
+loadTodos.$inject = ['todo'];
+
+function loadTodos(todo) {
+    return todo.query().$promise;
+}
+{% endhighlight %}
+
+Now AngularUI Router will load data from the REST API before performing the state transition.
+
+## Displaying resource data
+
+To display the data that was loaded in the state resolve function, we need to first change the controller function. The loaded data will be injected in the controller function using the Angular dependency injection mechanism. In order to be able to use that data in our view we need to assign it to the Angular scope.
+
+{% highlight javascript %}
+'use strict';
+
+(function () {
+    angular
+        .module('todo-app')
+        .controller('MainTodosController', MainTodosController);
+
+    // tell Angular we're expecting to get the todos from the state engine
+    MainTodosController.$inject = ['todos'];
+
+    function MainTodosController(todos /* the todos loaded from the REST API */) {
+        var vm = this;
+
+        // assign the todos to the scope so that we can access them from within the view
+        vm.todos = todos;
+    }
+})();
+{% endhighlight %}
+
+In our view we can then access the data from the `vm.todos` property.
+
+{% highlight html %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="todo in vm.todos">
+            <td>{% raw %}{{ todo.title }}{% endraw %}</td>
+        </tr>
+    </tbody>
+</table>
 {% endhighlight %}
 
 <nav>
   <ul class="pager">
-    <li class="next"><a href="/authenticating-using-a-jwt-token">Authenticating using a JWT token <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="{{ "authenticating-using-a-jwt-token" | prepend: site.baseurl }}">Authenticating using a JWT token <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>
 

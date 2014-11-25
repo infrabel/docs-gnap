@@ -93,7 +93,7 @@ You're now greeted by Yeoman who will guide you through the rest of the scaffold
 First you need to enter the project name of your application. This will be used as the AngularJS module name for your application. We recommend using a name that is all lower case and uses a hyphen as the word separator. Avoid spaces and other special characters.
 
 {% highlight text %}
-? What is the project name of your application? todo-list
+? What is the project name of your application? todo-app
 {% endhighlight %}
 
 Next the generator will prompt you to enter a title for your app. The title you enter will be used as the default title for pages in your webapp.
@@ -129,6 +129,6 @@ Happy programming!
 
 <nav>
   <ul class="pager">
-    <li class="next"><a href="/application-structure">Application structure <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="{{ "application-structure" | prepend: site.baseurl }}">Application structure <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>

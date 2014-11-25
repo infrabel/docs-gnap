@@ -6,6 +6,6 @@ sidebar: troubleshooting-your-application
 
 <nav>
   <ul class="pager">
-    <li class="next"><a href="/advanced-topics">Advanced topics <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="{{ "advanced-topics" | prepend: site.baseurl }}">Advanced topics <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>
