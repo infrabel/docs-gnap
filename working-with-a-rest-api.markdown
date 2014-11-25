@@ -92,11 +92,7 @@ var stateSettings = {
     
     /* ... */
 };
-{% endhighlight %}
 
-Next add the `loadTodos` function:
-
-{% highlight javascript %}
 loadTodos.$inject = ['todo'];
 
 function loadTodos(todo) {

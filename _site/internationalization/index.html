@@ -20,6 +20,7 @@
     <![endif]-->
   </head>
   <body>
+    <a href="https://github.com/infrabel/GNaP.Web.Themes"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
     <div class="container">
       <div class="row">
         <div class="col-md-3">
@@ -47,9 +48,64 @@
   </header>
 
   <article class="article-content">
-  <nav>
+  <p>GNaP.Web.Themes makes it easy to localize your applications. It has built-in support for translating content using <a href="http://angular-translate.github.io">angular-translate</a> - and - date and number formatting using <a href="https://docs.angularjs.org/guide/i18n">AngularJS I18n</a>.</p>
+
+<h2 id="translating-content">Translating content</h2>
+
+<p>GNaP.Web.Themes uses <a href="http://angular-translate.github.io">angular-translate</a> for showing translated content. By default content is only loaded on demand. This means that when bootstrapping your application you’re not losing time loading unneeded resources.</p>
+
+<p>Translations are saved in resource files using the JSON format. They are stored together with the feature they belong to. </p>
+
+<pre><code>src/
+--- app/
+------- main/
+----------- todos/
+--------------- todos.translations.en.json
+--------------- todos.translations.fr.json
+--------------- todos.translations.nl.json
+----------- main.translations.en.json
+----------- main.translations.fr.json
+----------- main.translations.nl.json
+</code></pre>
+
+<p>Contents of <code>todos.translations.en.json</code>:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+    <span class="s2">"main.todos"</span><span class="p">:</span>  <span class="p">{</span>
+        <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Todo List"</span><span class="p">,</span>
+        <span class="s2">"breadcrumb"</span><span class="p">:</span> <span class="s2">"Todo List"</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>You can load translations into your application in the state configuration file. Look for the <code>stateSettings</code> object and set the <code>translations</code> property to the base path where your translations are located. Normally this would be the path to your state relative from the application root.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">stateSettings</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">translations</span><span class="p">:</span> <span class="s1">'app/main/todos'</span>
+<span class="p">};</span></code></pre></div>
+
+<p>You can translate content in your views using filters:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"page-header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>
+        {{ 'main.todos.title' | translate }}
+    <span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="formatting-dates-and-numbers">Formatting dates and numbers</h2>
+
+<p>Angular supports i18n/l10n for <a href="https://docs.angularjs.org/api/ng/filter/date">date</a>, <a href="https://docs.angularjs.org/api/ng/filter/number">number</a> and <a href="https://docs.angularjs.org/api/ng/filter/currency">currency</a> filters.</p>
+
+<h2 id="locale-selection">Locale selection</h2>
+
+<p>GNaP.Web.Angular has a built-in locale detection mechanism. If a user hasn’t yet selected a locale then the browser language is used as the default locale. The locale selection is stored in local storage so that the next time a user visits your application, the previously selected locale will be used.</p>
+
+<p>The <a href="https://github.com/infrabel/GNaP.Web.Themes/blob/ca95ab7f2cb55e7405c492bc43d43269eec9aac5/custom/gnap-angular/js/develop/gnap/locale-selector.directive.js">locale-selector</a> directive allows users to select a locale from a drop down list. If you’ve scaffolded your application then it should be located in the nav bar by default.</p>
+
+<p>Programmatically setting the locale can be done using the <a href="https://github.com/infrabel/GNaP.Web.Themes/blob/61ecd0a82c6156a8d995f6aea75e33c4c3e97bc7/custom/gnap-angular/js/develop/gnap/locale.service.js">locale service</a> more specifically through the use of the setCurrentLocale function. Note that this function will trigger a reload of your application.</p>
+
+<nav>
   <ul class="pager">
-    <li class="next"><a href="/validating-user-input">Validation user input <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="/validating-user-input">Validating user input <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>
 
