@@ -6,6 +6,6 @@ sidebar: authenticating-using-a-jwt-token
 
 <nav>
   <ul class="pager">
-    <li class="next"><a href="/internationalization">Internationalization (I18n) <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="{{ "internationalization" | prepend: site.baseurl }}">Internationalization (I18n) <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>

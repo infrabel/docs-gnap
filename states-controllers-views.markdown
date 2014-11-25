@@ -108,7 +108,7 @@ var stateSettings = {
 
 <nav>
   <ul class="pager">
-    <li class="next"><a href="/working-with-a-rest-api">Working with a REST API <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="{{ "working-with-a-rest-api" | prepend: site.baseurl }}">Working with a REST API <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>
 

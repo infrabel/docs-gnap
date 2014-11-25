@@ -110,6 +110,6 @@ Configures your application. Write your module run and config functions here to 
 
 <nav>
   <ul class="pager">
-    <li class="next"><a href="/configuring-your-application">Configuring your application <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="{{ "configuring-your-application" | prepend: site.baseurl }}">Configuring your application <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>

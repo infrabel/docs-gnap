@@ -79,6 +79,6 @@ You can use the following API to change how titles are displayed:
 
 <nav>
   <ul class="pager">
-    <li class="next"><a href="/states-controllers-views">States, Controllers &amp; Views <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="{{ "states-controllers-views" | prepend: site.baseurl }}">States, Controllers &amp; Views <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>

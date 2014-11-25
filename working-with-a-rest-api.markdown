@@ -145,7 +145,7 @@ In our view we can then access the data from the `vm.todos` property.
 
 <nav>
   <ul class="pager">
-    <li class="next"><a href="/authenticating-using-a-jwt-token">Authenticating using a JWT token <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="{{ "authenticating-using-a-jwt-token" | prepend: site.baseurl }}">Authenticating using a JWT token <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>
 

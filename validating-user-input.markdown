@@ -31,6 +31,6 @@ Applies [Bootstrap 3 validation states](http://getbootstrap.com/css/#forms-contr
 
 <nav>
   <ul class="pager">
-    <li class="next"><a href="/error-handling">Error handling <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="{{ "error-handling" | prepend: site.baseurl }}">Error handling <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>

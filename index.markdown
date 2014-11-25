@@ -129,6 +129,6 @@ Happy programming!
 
 <nav>
   <ul class="pager">
-    <li class="next"><a href="/application-structure">Application structure <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="{{ "application-structure" | prepend: site.baseurl }}">Application structure <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>

@@ -84,6 +84,6 @@ Programmatically setting the locale can be done using the [locale service](https
 
 <nav>
   <ul class="pager">
-    <li class="next"><a href="/validating-user-input">Validating user input <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="{{ "validating-user-input" | prepend: site.baseurl }}">Validating user input <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>
