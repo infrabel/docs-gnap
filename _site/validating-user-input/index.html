@@ -48,7 +48,28 @@
   </header>
 
   <article class="article-content">
-  <nav>
+  <p>GNaP.Web.Themes comes with a set of validation helpers to make validating user input easier.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">gnap-submit=</span><span class="s">'vm.save()'</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">gnap-show-validity</span> <span class="na">for=</span><span class="s">"firstName"</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"control-label"</span> <span class="na">for=</span><span class="s">"firstName"</span><span class="nt">&gt;</span>First Name<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">ng-model=</span><span class="s">"vm.firstName"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"firstName"</span> <span class="na">name=</span><span class="s">"firstName"</span> <span class="na">required</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">gnap-validation-messages</span> <span class="na">for=</span><span class="s">"firstName"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">gnap-validation-message</span> <span class="na">when=</span><span class="s">"required"</span><span class="nt">&gt;</span>Enter the first name<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Save<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+<h3 id="gnap-submit">gnap-submit</h3>
+
+<p>The <a href="https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/submit.directive.js">gnap-submit</a> directive invokes its assigned function only when the form is in a valid state. It also keeps track of asynchronous validation methods and lets them finish before submitting the form.</p>
+
+<h3 id="gnap-show-validity">gnap-show-validity</h3>
+
+<p>Applies <a href="http://getbootstrap.com/css/#forms-control-validation">Bootstrap 3 validation states</a> styling for invalid input fields.</p>
+
+<nav>
   <ul class="pager">
     <li class="next"><a href="/error-handling">Error handling <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
