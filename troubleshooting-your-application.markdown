@@ -71,6 +71,6 @@ GNaP.Web.Themes is tested to work in Internet Explorer 8+. Modern browsers such 
 
 <nav>
   <ul class="pager">
-    <li class="next"><a href="{{ "advanced-topics" | prepend: site.baseurl }}">Advanced topics <span aria-hidden="true">&rarr;</span></a></li>
+    <li class="next"><a href="{{ "appendix-1-sample-node-rest-api" | prepend: site.baseurl }}">Appendix 1: Sample node REST API <span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>
