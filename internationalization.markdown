@@ -51,6 +51,16 @@ You can translate content in your views using filters:
     </h1>
 </div>
 {% endhighlight %}
+
+[angular-translate](http://angular-translate.github.io) also has an API for accessing translations programmatically:
+
+{% highlight javascript %}
+$translate(['translation-key-1', 'translation-key-2']).then(function(translations) {  
+    // you can now get the translated text as follows: 
+    var translation1 = translations['translation-key-1'];
+    var translation2 = translations['translation-key-2'];
+});
+{% endhighlight %}
     
 ## Formatting dates and numbers
 
