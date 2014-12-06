@@ -5,6 +5,7 @@
 .team-logo, .team-logo-bottom {
     width: 75px;
     height: 27px;
+    background-image: url(../images/logo.png);
 }
 
 .ace-nav>li {
