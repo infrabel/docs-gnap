@@ -2,8 +2,9 @@
 title: GNaP Docs
 email: dotnet@infrabel.be
 description: "The official GNaP documentation"
-baseurl: "/docs-gnap/"
-url: "http://infrabel.github.io/docs-gnap"
+baseurl: "/"
+themeurl: "/node_modules/gnap-theme-gnap/"
+url: "http://gnap.io"
 
 # Build settings
 markdown: kramdown
