@@ -1,0 +1,11 @@
+.sidebar, .sidebar:before {
+    width: 300px;
+}
+
+.main-content {
+    margin-left: 300px;
+}
+
+.nav-list>li a {
+    padding-left: 15px;
+}
