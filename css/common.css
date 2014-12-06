@@ -6,6 +6,11 @@
     width: 75px;
     height: 27px;
     background-image: url(../images/logo.png);
+    margin-left: 10px;
+}
+
+.container .team-logo, .container .team-logo-bottom {
+    margin-left: 0px;
 }
 
 .ace-nav>li {
