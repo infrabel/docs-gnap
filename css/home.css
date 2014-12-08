@@ -69,3 +69,36 @@
     line-height: 26px;
     text-align: justify;
 }
+
+.team {
+    padding: 40px 0 50px 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.team h2 {
+    margin-bottom: 40px;
+}
+
+.team strong {
+    color: #555;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.team p {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+}
+
+.users {
+    padding: 40px 0 40px 0;
+    background-color: rgb(57, 57, 57);
+    color: #FFF;
+}
+
+.users h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #FFF;
+}
