@@ -26,7 +26,7 @@ title: Project Releases
                                             {[{ release.tag_name }]}
                                         </a>
                                     </h5>
-                                    <span am-time-ago="release.published_at"></span> by <a href="{[{ release.author.html_url }]}"><img src="{[{ release.author.avatar_url }]}" alt="{[{ release.author.login }]}" /> {[{ release.author.login }]}</a>
+                                    <a href="{[{ release.author.html_url }]}"><img src="{[{ release.author.avatar_url }]}" alt="{[{ release.author.login }]}" /> {[{ release.author.login }]}</a> released this <span am-time-ago="release.published_at"></span>
                                 </div>
                             </div>
                             <div class="installation" ng-show="project.nugetPackageId || project.npmPackageId">
