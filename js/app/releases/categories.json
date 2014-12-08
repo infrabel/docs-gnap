@@ -1,0 +1,64 @@
+[
+     {
+        "title":"Theme",
+        "description": "The packages that are used to build the default GNaP theme files.",
+        "projects":[
+            {
+                "name": "generator-gnap",
+                "description":"Yeoman generator for GNaP applications.",
+                "url":"https://github.com/infrabel/generator-gnap",
+                "npmPackageId":"generator-gnap"
+            },
+            {
+                "name":"themes-gnap",
+                "description":"Standardized build to produce web themes for use with GNaP.",
+                "url":"https://github.com/infrabel/themes-gnap"
+            }
+        ]
+     },
+     {
+        "title":".NET",
+        "description": "Packages for the .NET framework.",
+        "projects":[
+            {
+                "name":"GNaP.Common",
+                "description":"Common base libraries for GNaP.",
+                "url":"https://github.com/infrabel/GNaP.Common",
+                "nugetPackageId":"GNaP.Common"
+            },
+            {
+                "name":"GNaP.DependencyInjection.StructureMap",
+                "description":"StructureMap IoC implementation for GNaP.",
+                "url":"https://github.com/infrabel/GNaP.DependencyInjection.StructureMap",
+                "nugetPackageId":"GNaP.DependencyInjection.StructureMap"
+            },
+            {
+                "name":"GNaP.DependencyInjection.Ninject",
+                "description":"Ninject IoC implementation for GNaP.",
+                "url":"https://github.com/infrabel/GNaP.DependencyInjection.Ninject",
+                "nugetPackageId":"GNaP.DependencyInjection.Ninject"
+            },
+            {
+                "name":"GNaP.WebApi.Versioning",
+                "description":"Standardized way to do versioning with Web API.",
+                "url":"https://github.com/infrabel/GNaP.WebApi.Versioning",
+                "nugetPackageId":"GNaP.WebApi.Versioning"
+            },
+            {
+                "name":"GNaP.Owin.Authentication.Jwt",
+                "description":"Owin middleware to issue JSON Web Tokens.",
+                "url":"https://github.com/infrabel/GNaP.Owin.Authentication.Jwt",
+                "nugetPackageId":"GNaP.Owin.Authentication.Jwt"
+            }
+        ]
+     },
+     {
+        "title":"Servers",
+        "description": "Stand-alone servers",
+        "projects":[
+            {
+                "name":"wiki-gnap"
+            }
+        ]
+     }
+]
