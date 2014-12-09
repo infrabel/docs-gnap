@@ -46,3 +46,19 @@
 .project .installation {
     margin-bottom: 25px;
 }
+
+.project .tab-content {
+    padding-bottom: 0;
+}
+
+.project .nav-tabs>li.active>a, .project .nav-tabs>li.active>a:focus, .project .nav-tabs>li.active>a:hover {
+    background-color: transparent;
+}
+
+.project .nav-tabs>li.active>a:focus {
+    border-bottom-color: #f5f5f5;
+}
+
+.project .nav-tabs.nav-justified>.active>a {
+    border-bottom-color: #f5f5f5;
+}

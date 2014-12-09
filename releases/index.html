@@ -31,17 +31,36 @@ title: Project Releases
                                     <a href="{[{ release.author.html_url }]}"><img src="{[{ release.author.avatar_url }]}" alt="{[{ release.author.login }]}" /> {[{ release.author.login }]}</a> released this <span am-time-ago="release.published_at"></span>
                                 </div>
                             </div>
-                            <div class="installation" ng-show="project.nugetPackageId || project.npmPackageId">
-                                <p>Install latest version:</p>
-                                <div class="command-line" ng-show="project.nugetPackageId">
-                                    <p>
-                                        <code>PM&gt; Install-Package {[{ project.nugetPackageId }]}</code>
-                                    </p>
+                            <div class="installation" ng-show="project.packages">
+                                <div ng-show="project.packages.length == 1">
+                                    <div ng-repeat="packageList in project.packages">
+                                        <div class="command-line" ng-repeat="package in packageList.nuget">
+                                            <p>
+                                                <code>PM&gt; Install-Package {[{ package }]}</code>
+                                            </p>
+                                        </div>
+                                        <div class="command-line" ng-repeat="package in packageList.npm">
+                                            <p>
+                                                <code>npm install -g {[{ package }]}</code>
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="command-line" ng-show="project.npmPackageId">
-                                    <p>
-                                        <code>npm install -g {[{ project.npmPackageId }]}</code>
-                                    </p>
+                                <div ng-show="project.packages.length > 1">
+                                    <tabset justified="true">
+                                        <tab heading="{[{ packageList.title }]}" ng-repeat="packageList in project.packages">
+                                            <div class="command-line" ng-repeat="package in packageList.nuget">
+                                                <p>
+                                                    <code>PM&gt; Install-Package {[{ package }]}</code>
+                                                </p>
+                                            </div>
+                                            <div class="command-line" ng-repeat="package in packageList.npm">
+                                                <p>
+                                                    <code>npm install -g {[{ package }]}</code>
+                                                </p>
+                                            </div>
+                                        </tab>
+                                    </tabset>
                                 </div>
                             </div>
                         </div>
