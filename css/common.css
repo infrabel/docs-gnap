@@ -46,6 +46,10 @@
   padding-bottom: 20px;
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 @media only screen and (max-width: 460px) {
   .navbar .navbar-header.pull-left {
     display: block;

@@ -9,7 +9,7 @@ title: Project Releases
             <h1>{{ page.title }}</h1>
         </div>
         <p>The recommended way to get started with GNaP is to follow the <a href="{{ "docs" | prepend: site.baseurl }}">Getting Started</a> guide. You can however use any of the components that make up GNaP in your projects.</p>
-        <div ng-app="releases" ng-controller="ProjectsController as vm">
+        <div ng-app="releases" ng-controller="ProjectsController as vm" ng-cloak>
             <div ng-repeat="category in vm.categories" class="category">
                 <div class="row">
                     <div class="col-md-2">
