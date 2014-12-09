@@ -91,6 +91,11 @@
     margin: 10px 0 0 0;
 }
 
+.team img {
+    width: 114px;
+    height: 114px;
+}
+
 .users {
     padding: 40px 0 40px 0;
     background-color: rgb(57, 57, 57);
@@ -101,4 +106,20 @@
     text-align: center;
     margin-bottom: 40px;
     color: #FFF;
+}
+
+.footer {
+    background-color: #00AEEF;
+    color: #fff;
+    padding: 40px 0 40px 0;
+}
+
+.footer h2, .footer .post-list h3 a {
+    color: #fff;
+}
+
+.footer .post-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }

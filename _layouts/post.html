@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>GNaP</title>
+
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="{{ "css/bootstrap.min.css" | prepend: site.themeurl }}" rel="stylesheet" />
+        <link rel="stylesheet" href="{{ "css/font-awesome.min.css" | prepend: site.themeurl }}" />
+
+        <!--[if IE 7]>
+            <link rel="stylesheet" href="{{ "css/font-awesome-ie7.min.css" | prepend: site.themeurl }}" />
+        <![endif]-->
+
+        <link rel="stylesheet" href="{{ "css/ace-fonts.min.css" | prepend: site.themeurl }}" />
+        <link rel="stylesheet" href="{{ "css/ace.min.css" | prepend: site.themeurl }}" />
+        <link rel="stylesheet" href="{{ "css/ace-skins.min.css" | prepend: site.themeurl }}" />
+        <link rel="stylesheet" href="{{ "css/print.min.css" | prepend: site.themeurl }}" media="print" />
+
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="{{ "css/ace-ie.min.css" | prepend: site.themeurl }}" />
+            <link rel="stylesheet" href="{{ "css/ie8.min.css" | prepend: site.themeurl }}" />
+        <![endif]-->
+
+        <!--[if lt IE 9]>
+            <script src="{{ "js/html5shiv.min.js" | prepend: site.themeurl }}"></script>
+            <script src="{{ "js/respond.min.js" | prepend: site.themeurl }}"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="{{ "css/ie9.min.css" | prepend: site.themeurl }}" />
+
+        <link rel="stylesheet" href="{{ "css/jekyll-syntax/default.css" | prepend: site.baseurl }}" />
+        <link rel="stylesheet" href="{{ "css/common.css" | prepend: site.baseurl }}" />
+        <link rel="stylesheet" href="{{ "css/blog.css" | prepend: site.baseurl }}" />
+
+        <script src="{{ "js/modernizr.min.js" | prepend: site.themeurl }}"></script>
+
+        <link href="{{ "images/favicon.ico" | prepend: site.baseurl }}" rel="shortcut icon" type="image/x-icon" />
+    </head>
+
+    <body>
+        <div class="topbar">
+            <div class="container">
+                {% include topbar.html %}
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="page-header">
+                <h1>
+                    Blog
+                    <small>News from the development blah</small>
+                </h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="post">
+                        <header class="post-title">
+                            <h1>
+                                {{ page.title }}
+                            </h1>
+                            <small>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</small>
+                        </header>
+                        <article class="post-content">
+                            {{ content }}
+                        </article>
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <h2>Archive</h2>
+                    <ul class="post-list">
+                        {% for post in site.posts %}
+                            <li>
+                                <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+
+        <script type="text/javascript">
+            window.jQuery || document.write("<script src='{{ "js/jquery.min.js" | prepend: site.themeurl }}'>"+"<"+"/script>");
+        </script>
+        <script type="text/javascript">
+            if("ontouchend" in document) document.write("<script src='{{ "js/jquery.mobile.custom.min.js" | prepend: site.themeurl }}'>"+"<"+"/script>");
+        </script>
+        <script src="{{ "js/bootstrap.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/ace-elements.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/ace.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/layout.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "bower_components/angular/angular.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "bower_components/angular-resource/angular-resource.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "bower_components/moment/moment.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "bower_components/angular-moment/angular-moment.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "bower_components/underscore/underscore.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/app.modules.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/app.config.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/projects.controller.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/categories.resource.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/releases.resource.js" | prepend: site.baseurl }}"></script>
+    </body>
+</html>
