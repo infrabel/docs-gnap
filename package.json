@@ -8,7 +8,7 @@
     "gnap",
 	"docs"
   ],
-  "devDependencies": {
+  "dependencies": {
     "gnap-theme-gnap": "^1.26.0"
   }
 }
