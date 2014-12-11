@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc
 title: Configuring your application
 sidebar: configuring-your-application
 next_page_url: docs/states-controllers-views
@@ -22,7 +22,7 @@ You can change the list of available languages in your `app.config.js` file.
 
 ## Routing
 
-By default routing is configured as follows: 
+By default routing is configured as follows:
 
 {:.table}
 | URL | Redirect |

@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc
 title: States, Controllers &amp; Views
 sidebar: states-controllers-views
 next_page_url: docs/working-with-a-rest-api

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>GNaP</title>
+        <title>Releases - GNaP</title>
 
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,7 +45,7 @@
                 {% include topbar.html %}
             </div>
         </div>
-        
+
         <div class="container">
             {{ content }}
         </div>
@@ -60,12 +60,13 @@
         <script src="{{ "js/ace-elements.min.js" | prepend: site.themeurl }}"></script>
         <script src="{{ "js/ace.min.js" | prepend: site.themeurl }}"></script>
         <script src="{{ "js/layout.min.js" | prepend: site.themeurl }}"></script>
-        <script src="{{ "js/vendor/angular.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "js/vendor/angular-resource.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "js/vendor/moment.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/angular/angular.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/angular/angular-resource.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/moment.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/ui-bootstrap/ui-bootstrap-tpls-0.11.0.min.js" | prepend: site.themeurl }}"></script>
+
         <script src="{{ "js/vendor/angular-moment.js" | prepend: site.baseurl }}"></script>
         <script src="{{ "js/vendor/underscore.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "js/vendor/ui-bootstrap-tpls-0.12.0.js" | prepend: site.baseurl }}"></script>
         <script src="{{ "js/app/releases/app.modules.js" | prepend: site.baseurl }}"></script>
         <script src="{{ "js/app/releases/app.config.js" | prepend: site.baseurl }}"></script>
         <script src="{{ "js/app/releases/projects.controller.js" | prepend: site.baseurl }}"></script>

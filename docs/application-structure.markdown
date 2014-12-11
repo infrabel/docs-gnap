@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc
 title: Application Structure
 sidebar: application-structure
 next_page_url: docs/configuring-your-application
@@ -30,7 +30,7 @@ In a traditional application structure you would have a folder per file or class
 We favor a stucture where everything is grouped by feature. This makes it clear for everyone what the application does instead of how it work. If later on someone else has to work on your code it is immediately obvious what the main functionalities of the application are.
 
 **DO THIS:**
-    
+
     src/
     --- app/
     ------- main/
@@ -61,7 +61,7 @@ Configures your application module and declares the modules to import.
 
 (function () {
     angular
-        .module('gnap-web-themes-docs', 
+        .module('gnap-web-themes-docs',
                 ['gnap',
                  'ngSanitize',
                  'ngResource']);

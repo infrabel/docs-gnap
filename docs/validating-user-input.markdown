@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc
 title: Validating user input
 sidebar: validating-user-input
 next_page_url: docs/error-handling

@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc
 title: Error handling
 sidebar: error-handling
 next_page_url: docs/putting-your-application-in-production
@@ -28,7 +28,7 @@ This directive must be added at the HTML element level. The index.html file gene
 ## Application errors
 
 GNaP.Web.Themes will gracefully handle unexpected application errors due to one of the following reasons:
- 
+
 - a controller logic error
 - an error that occurs in a directive
 - view template errors

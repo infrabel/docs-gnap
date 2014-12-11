@@ -61,13 +61,12 @@
     display: block;
     float: none !important;
   }
+
   .navbar .navbar-header.pull-right {
     display: block;
     float: none !important;
   }
-  /*.navbar .navbar-inner {
-  border-bottom-width:0;
- }*/
+
   .ace-nav {
     display: block;
     float: none !important;
@@ -77,15 +76,18 @@
     border-width: 0 0;
     letter-spacing: auto;
   }
+
   .ace-nav > li {
     display: inline-block;
     float: none !important;
     text-align: left;
     letter-spacing: normal;
   }
+
   .ace-nav > li:first-child {
     border-left: none;
   }
+  
   .ace-nav > li:last-child {
     border-right: none;
   }

@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc
 title: Putting your application in production
 sidebar: putting-your-application-in-production
 next_page_url: docs/troubleshooting-your-application

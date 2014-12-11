@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc
 title: Working with a REST API
 sidebar: working-with-a-rest-api
 next_page_url: docs/authenticating-using-a-jwt-token
@@ -44,7 +44,7 @@ Content-Type: application/json; charset=utf-8
 
 ## Adding a resource to your application
 
-Angular has built-in support for talking with a REST web API through the [ngResource](https://docs.angularjs.org/api/ngResource/service/$resource) module. Although you can use the `$resource` service directly in your controllers it's better to create a custom service for each of the resources you need to communicate with. This way the configuration of the resource is done in your custom service and can be changed in one location if needed. 
+Angular has built-in support for talking with a REST web API through the [ngResource](https://docs.angularjs.org/api/ngResource/service/$resource) module. Although you can use the `$resource` service directly in your controllers it's better to create a custom service for each of the resources you need to communicate with. This way the configuration of the resource is done in your custom service and can be changed in one location if needed.
 
 {% highlight javascript %}
 'use strict';
@@ -82,7 +82,7 @@ var stateSettings = {
     /* ... */
 
     state: {
-        
+
         /* ... */
 
         // Add this to your state to pre-load data before the view is processed:
@@ -91,7 +91,7 @@ var stateSettings = {
         }
 
     }
-    
+
     /* ... */
 };
 

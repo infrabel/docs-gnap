@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc
 title: Sample node REST API
 sidebar: appendix-1-sample-node-rest-api
 ---

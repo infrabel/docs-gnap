@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc
 title: Getting Started
 sidebar: getting-started
 next_page_url: docs/application-structure
@@ -87,9 +87,9 @@ You're now greeted by Yeoman who will guide you through the rest of the scaffold
    `---------´   |     outstanding GNaP     |
     ( _´U`_ )    |        generator!        |
     /___A___\    '--------------------------'
-     |  ~  |     
-   __'.___.'__   
- ´   `  |° ´ Y ` 
+     |  ~  |
+   __'.___.'__
+ ´   `  |° ´ Y `
 {% endhighlight %}
 
 First you need to enter the project name of your application. This will be used as the AngularJS module name for your application. We recommend using a name that is all lower case and uses a hyphen as the word separator. Avoid spaces and other special characters.
@@ -108,7 +108,7 @@ You're now ready to select the theme to use for your webapp. Select one by using
 
 {% highlight text %}
 ? Which theme does your application use? (Use arrow keys)
-❯ GNaP.Themes.Web.GNaP.Angular 
+❯ GNaP.Themes.Web.GNaP.Angular
 {% endhighlight %}
 
 Finally you need to enter the port that the development HTTP server will run on. Leave this field empty and press enter to use the default port (9000).

@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc
 title: Troubleshooting your application
 sidebar: troubleshooting-your-application
 next_page_url: docs/appendix-1-sample-node-rest-api
@@ -22,7 +22,7 @@ As written in the [Error handling]({{ "error-handling" | prepend: site.baseurl }
 
 In the handling function you can then send an error report to your server by using a resource service.
 
-The service would look something like this: 
+The service would look something like this:
 
 {% highlight javascript %}
 'use strict';

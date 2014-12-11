@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc
 title: Authenticating using a JWT token
 sidebar: authenticating-using-a-jwt-token
 next_page_url: docs/internationalization

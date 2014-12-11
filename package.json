@@ -9,6 +9,6 @@
 	"docs"
   ],
   "dependencies": {
-    "gnap-theme-gnap": "^1.26.0"
+    "gnap-theme-gnap-angular": "^0.22.0"
   }
 }

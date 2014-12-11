@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: doc
 title: Internationalization (I18n)
 sidebar: internationalization
 next_page_url: docs/validating-user-input
@@ -12,7 +12,7 @@ GNaP.Web.Themes makes it easy to localize your applications. It has built-in sup
 
 GNaP.Web.Themes uses [angular-translate](http://angular-translate.github.io) for showing translated content. By default content is only loaded on demand. This means that when bootstrapping your application you're not losing time loading unneeded resources.
 
-Translations are saved in resource files using the JSON format. They are stored together with the feature they belong to. 
+Translations are saved in resource files using the JSON format. They are stored together with the feature they belong to.
 
     src/
     --- app/
@@ -58,12 +58,12 @@ You can translate content in your views using filters:
 
 {% highlight javascript %}
 $translate(['translation-key-1', 'translation-key-2']).then(function(translations) {  
-    // you can now get the translated text as follows: 
+    // you can now get the translated text as follows:
     var translation1 = translations['translation-key-1'];
     var translation2 = translations['translation-key-2'];
 });
 {% endhighlight %}
-    
+
 ## Formatting dates and numbers
 
 Angular supports i18n/l10n for [date](https://docs.angularjs.org/api/ng/filter/date), [number](https://docs.angularjs.org/api/ng/filter/number) and [currency](https://docs.angularjs.org/api/ng/filter/currency) filters.
@@ -79,11 +79,11 @@ The [locale-selector](https://github.com/infrabel/GNaP.Web.Themes/blob/ca95ab7f2
     <div class="navbar-container" id="navbar-container">
 
         ...
-        
+
         <div class="navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
                 <li gnap-locale-selector class="light-blue"></li>
-                
+
                 ...
 
             </ul>
