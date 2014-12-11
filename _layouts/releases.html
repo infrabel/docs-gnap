@@ -32,7 +32,7 @@
 
         <link rel="stylesheet" href="{{ "css/jekyll-syntax/default.css" | prepend: site.baseurl }}" />
         <link rel="stylesheet" href="{{ "css/common.css" | prepend: site.baseurl }}" />
-        <link rel="stylesheet" href="{{ "css/home.css" | prepend: site.baseurl }}" />
+        <link rel="stylesheet" href="{{ "css/releases.css" | prepend: site.baseurl }}" />
 
         <script src="{{ "js/modernizr.min.js" | prepend: site.themeurl }}"></script>
 
@@ -45,8 +45,10 @@
                 {% include topbar.html %}
             </div>
         </div>
-
-        {{ content }}
+        
+        <div class="container">
+            {{ content }}
+        </div>
 
         <script type="text/javascript">
             window.jQuery || document.write("<script src='{{ "js/jquery.min.js" | prepend: site.themeurl }}'>"+"<"+"/script>");
@@ -58,5 +60,16 @@
         <script src="{{ "js/ace-elements.min.js" | prepend: site.themeurl }}"></script>
         <script src="{{ "js/ace.min.js" | prepend: site.themeurl }}"></script>
         <script src="{{ "js/layout.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/vendor/angular.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/vendor/angular-resource.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/vendor/moment.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/vendor/angular-moment.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/vendor/underscore.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/vendor/ui-bootstrap-tpls-0.12.0.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/app.modules.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/app.config.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/projects.controller.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/categories.resource.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/releases.resource.js" | prepend: site.baseurl }}"></script>
     </body>
 </html>

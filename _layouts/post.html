@@ -32,7 +32,7 @@
 
         <link rel="stylesheet" href="{{ "css/jekyll-syntax/default.css" | prepend: site.baseurl }}" />
         <link rel="stylesheet" href="{{ "css/common.css" | prepend: site.baseurl }}" />
-        <link rel="stylesheet" href="{{ "css/home.css" | prepend: site.baseurl }}" />
+        <link rel="stylesheet" href="{{ "css/blog.css" | prepend: site.baseurl }}" />
 
         <script src="{{ "js/modernizr.min.js" | prepend: site.themeurl }}"></script>
 
@@ -45,8 +45,42 @@
                 {% include topbar.html %}
             </div>
         </div>
+        
+        <div class="container">
+            <div class="page-header">
+                <h1>
+                    Blog
+                    <small>News from the development team</small>
+                </h1>
+            </div>
 
-        {{ content }}
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="post">
+                        <header class="post-title">
+                            <h1>
+                                {{ page.title }}
+                            </h1>
+                            <small>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</small>
+                        </header>
+                        <article class="post-content">
+                            {{ content }}
+                        </article>
+                    </div>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <h2>Archive</h2>
+                    <ul class="post-list">
+                        {% for post in site.posts %}
+                            <li>
+                                <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
 
         <script type="text/javascript">
             window.jQuery || document.write("<script src='{{ "js/jquery.min.js" | prepend: site.themeurl }}'>"+"<"+"/script>");
@@ -58,5 +92,15 @@
         <script src="{{ "js/ace-elements.min.js" | prepend: site.themeurl }}"></script>
         <script src="{{ "js/ace.min.js" | prepend: site.themeurl }}"></script>
         <script src="{{ "js/layout.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "bower_components/angular/angular.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "bower_components/angular-resource/angular-resource.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "bower_components/moment/moment.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "bower_components/angular-moment/angular-moment.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "bower_components/underscore/underscore.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/app.modules.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/app.config.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/projects.controller.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/categories.resource.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/releases/releases.resource.js" | prepend: site.baseurl }}"></script>
     </body>
 </html>

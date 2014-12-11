@@ -1,0 +1,72 @@
+---
+layout: releases
+title: Project Releases
+---
+
+<div class="container">
+    <div class="row">
+        <div class="page-header">
+            <h1>{{ page.title }}</h1>
+        </div>
+        <p>The recommended way to get started with GNaP is to follow the <a href="{{ "docs" | prepend: site.baseurl }}">Getting Started</a> guide. You can however use any of the components that make up GNaP in your projects.</p>
+        <div ng-app="releases" ng-controller="ProjectsController as vm" ng-cloak>
+            <div ng-repeat="category in vm.categories" class="category">
+                <div class="row">
+                    <div class="col-md-2">
+                        <h2 ng-bind="category.title"></h2>
+                        <p>{[{ category.description }]}</p>
+                    </div>
+                    <div class="col-md-9 col-md-offset-1">
+                        <div ng-repeat="project in category.projects" class="well project">
+                            <h3><a href="{[{ project.url }]}" ng-bind="project.name"></a></h3>
+                            <p class="description">{[{ project.description }]}</p>
+                            <div class="releases">
+                                <div ng-repeat="release in project.releases" class="release">
+                                    <h5>
+                                        <a href="{[{ release.html_url }]}">
+                                            <i class="icon-tag"></i>
+                                            {[{ release.tag_name }]}
+                                        </a>
+                                    </h5>
+                                    <a href="{[{ release.author.html_url }]}"><img src="{[{ release.author.avatar_url }]}" alt="{[{ release.author.login }]}" /> {[{ release.author.login }]}</a> released this <span am-time-ago="release.published_at"></span>
+                                </div>
+                            </div>
+                            <div class="installation" ng-show="project.packages">
+                                <div ng-show="project.packages.length == 1">
+                                    <div ng-repeat="packageList in project.packages">
+                                        <div class="command-line" ng-repeat="package in packageList.nuget">
+                                            <p>
+                                                <code>PM&gt; Install-Package {[{ package }]}</code>
+                                            </p>
+                                        </div>
+                                        <div class="command-line" ng-repeat="package in packageList.npm">
+                                            <p>
+                                                <code>npm install -g {[{ package }]}</code>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div ng-show="project.packages.length > 1">
+                                    <tabset justified="true">
+                                        <tab heading="{[{ packageList.title }]}" ng-repeat="packageList in project.packages">
+                                            <div class="command-line" ng-repeat="package in packageList.nuget">
+                                                <p>
+                                                    <code>PM&gt; Install-Package {[{ package }]}</code>
+                                                </p>
+                                            </div>
+                                            <div class="command-line" ng-repeat="package in packageList.npm">
+                                                <p>
+                                                    <code>npm install -g {[{ package }]}</code>
+                                                </p>
+                                            </div>
+                                        </tab>
+                                    </tabset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

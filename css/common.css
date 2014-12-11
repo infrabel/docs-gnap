@@ -1,3 +1,7 @@
+.topbar {
+    background-color: rgb(57, 57, 57);
+}
+
 .navbar-brand {
     padding-left: 0;
 }
@@ -23,6 +27,33 @@
 
 .ace-nav>li>a>[class*=icon-] {
     font-size: 13px;
+}
+
+.command-line code {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #202020;
+    color: #e2e2e2;
+    display: block;
+    font: 1.5em "andale mono", "lucida console", monospace;
+    line-height: 1.5em;
+    overflow: auto;
+    padding: 15px;
+}
+
+.page-header {
+  margin: 10px 0 30px 0;
+  padding-bottom: 20px;
+}
+
+.center-vertical {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
 }
 
 @media only screen and (max-width: 460px) {

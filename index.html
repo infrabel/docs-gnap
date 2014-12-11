@@ -67,3 +67,75 @@ layout: home
         </div>
     </div>
 </div>
+
+<div class="team">
+    <div class="container">
+        <h2>Core Contributors</h2>
+        <div class="row">
+            <div class="col-md-3 col-md-offset-3">
+                <img src="{{ "images/stijn.png" | prepend: site.baseurl }}"  />
+                <p>
+                    <strong>Stijn Roosen</strong>
+                    <br />
+                    <a href="https://github.com/sroosen"><i class="icon-github"></i> sroosen</a>
+                    <br />
+                    <a href="https://twitter.com/stijnroosen"><i class="icon-twitter"></i> stijnroosen</a>
+                </p>
+            </div>
+            <div class="col-md-3">
+                <img src="{{ "images/david.png" | prepend: site.baseurl }}"  />
+                <p>
+                    <strong>David Cumps</strong>
+                    <br />
+                    <a href="https://github.com/CumpsD"><i class="icon-github"></i> CumpsD</a>
+                    <br />
+                    <a href="https://twitter.com/CumpsD"><i class="icon-twitter"></i> CumpsD</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+                <h2>Blog</h2>
+                <ul class="post-list">
+                    {% for post in site.posts %}
+                        <li>
+                            <h3>
+                                <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+                            </h3>
+                            <p>
+                                {{ post.excerpt }}
+                            </p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-offset-1 users">
+                <h2>See who's using GNaP</h2>
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4 col-md-4 center-vertical">
+                        <a href="http://www.infrabel.be"><img src="{{ "images/users/infrabel.png" | prepend: site.baseurl }}" class="img-responsive" /></a>
+                    </div><!--
+                    --><div class="col-sm-6 col-xs-4 col-md-4 center-vertical">
+                        <a href="https://www.moneycloud.be"><img src="{{ "images/users/moneycloud.png" | prepend: site.baseurl }}" class="img-responsive" /></a>
+                    </div><!--
+                    --><div class="col-sm-6 col-xs-4 col-md-4 center-vertical">
+                        <a href="http://www.cumps.be"><img src="{{ "images/users/cumps.png" | prepend: site.baseurl }}" class="img-responsive" /></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-xs-4 col-md-4 center-vertical">
+                        <a href="http://www.demareg.be"><img src="{{ "images/users/demareg.png" | prepend: site.baseurl }}" class="img-responsive" /></a>
+                    </div>
+                    <div class="col-sm-6 col-xs-4 col-md-4 center-vertical">
+                        <a href="http://www.infomat.be"><img src="{{ "images/users/infomat.png" | prepend: site.baseurl }}" class="img-responsive" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

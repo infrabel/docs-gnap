@@ -1,7 +1,3 @@
-body {
-    background-color: rgb(57, 57, 57);
-}
-
 .hero {
     background-color: rgb(57, 57, 57);
     color: #fff;
@@ -72,4 +68,51 @@ body {
     font-size: 16px;
     line-height: 26px;
     text-align: justify;
+}
+
+.team {
+    padding: 40px 0 50px 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.team h2 {
+    margin-bottom: 40px;
+}
+
+.team strong {
+    color: #555;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.team p {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+}
+
+.team img {
+    width: 114px;
+    height: 114px;
+}
+
+.footer {
+    background-color: rgb(57, 57, 57);
+    color: #fff;
+    padding: 40px 0 40px 0;
+}
+
+.footer h2, .footer .post-list h3 a {
+    color: #fff;
+}
+
+.footer .post-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer .users h2 {
+    color: #aaa;
+    margin-bottom: 25px;
 }
