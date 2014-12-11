@@ -56,15 +56,22 @@
     display: none !important;
 }
 
-@media only screen and (max-width: 460px) {
+/*@media only screen and (max-width: 460px) {*/
+@media only screen and (max-width: 570px) {
   .navbar .navbar-header.pull-left {
     display: block;
     float: none !important;
+    text-align: center;
   }
 
   .navbar .navbar-header.pull-right {
     display: block;
     float: none !important;
+  }
+
+  .navbar-brand {
+    float: none;
+    line-height: 40px;
   }
 
   .ace-nav {
@@ -87,7 +94,7 @@
   .ace-nav > li:first-child {
     border-left: none;
   }
-  
+
   .ace-nav > li:last-child {
     border-right: none;
   }
