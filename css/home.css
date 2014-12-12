@@ -94,6 +94,10 @@
 .team img {
     width: 114px;
     height: 114px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    border: 4px solid #C0C0C0;
 }
 
 .footer {
