@@ -56,6 +56,17 @@
     display: none !important;
 }
 
+pre {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+  word-break: keep-all;
+}
+
+pre code {
+  white-space: pre;
+}
+
 /*@media only screen and (max-width: 460px) {*/
 @media only screen and (max-width: 570px) {
   .navbar .navbar-header.pull-left {
