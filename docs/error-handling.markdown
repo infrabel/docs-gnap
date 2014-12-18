@@ -6,7 +6,7 @@ next_page_url: docs/putting-your-application-in-production
 next_page_description: Putting your application in production
 ---
 
-GNaP.Web.Themes provides built-in handling for 4 types of errors:
+themes-gnap provides built-in handling for 4 types of errors:
 
 - global JavaScript errors
 - application errors
@@ -15,7 +15,7 @@ GNaP.Web.Themes provides built-in handling for 4 types of errors:
 
 ## Global JavaScript errors
 
-Unexpected JavaScript errors can be caught using the [gnap-global-error-handler](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/global-error-handler.directive.js) directive.
+Unexpected JavaScript errors can be caught using the [gnap-global-error-handler](https://github.com/infrabel/themes-gnap/blob/master/custom/gnap-angular/js/develop/gnap/global-error-handler.directive.js) directive.
 
 {% highlight html %}
 <html lang="en"
@@ -27,7 +27,7 @@ This directive must be added at the HTML element level. The index.html file gene
 
 ## Application errors
 
-GNaP.Web.Themes will gracefully handle unexpected application errors due to one of the following reasons:
+themes-gnap will gracefully handle unexpected application errors due to one of the following reasons:
 
 - a controller logic error
 - an error that occurs in a directive
@@ -47,7 +47,7 @@ When a call using [$http](https://docs.angularjs.org/api/ng/service/$http) or [$
 
 ## Custom error handling logic
 
-The [unhandledErrorChannel](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/unhandled-error.channel.js) service provides a way of getting notified of unhandled errors. You can call its `onErrorOccurred` function to subscribe to error events.
+The [unhandledErrorChannel](https://github.com/infrabel/themes-gnap/blob/master/custom/gnap-angular/js/develop/gnap/unhandled-error.channel.js) service provides a way of getting notified of unhandled errors. You can call its `onErrorOccurred` function to subscribe to error events.
 
 {% highlight javascript %}
 unhandledErrorChannel.onErrorOccurred(scope, onErrorOccurred);

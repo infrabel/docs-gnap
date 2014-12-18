@@ -8,7 +8,7 @@ next_page_description: Troubleshooting your application
 
 ## Building your application
 
-GNaP.Web.Themes comes with tooling to build your application so that it's ready for production.
+themes-gnap comes with tooling to build your application so that it's ready for production.
 
 Execute the following command in a command prompt that is opened at the root of your application:
 

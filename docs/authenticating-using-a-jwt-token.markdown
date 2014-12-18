@@ -6,7 +6,7 @@ next_page_url: docs/internationalization
 next_page_description: Internationalization (I18n)
 ---
 
-GNaP.Web.Themes has built-in support for authenticating using a JWT token.
+themes-gnap has built-in support for authenticating using a JWT token.
 
 > JSON Web Token (JWT) is a compact URL-safe means of representing claims to be transferred between two parties. The claims in a JWT are encoded as a JSON object that is digitally signed using JSON Web Signature (JWS) - [IETF](http://tools.ietf.org/html/draft-ietf-oauth-json-web-token)
 
@@ -20,11 +20,11 @@ The scaffolder has generated a folder named app/public/login that contains a log
 
 > TIP: A usefull tool for inspecting JWT tokens is [jwt.io](http://jwt.io)
 
-This token is then passed to the [session service](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/session.service.js) to initiate a session for the current user.
+This token is then passed to the [session service](https://github.com/infrabel/themes-gnap/blob/master/custom/gnap-angular/js/develop/gnap/session.service.js) to initiate a session for the current user.
 
 ## Getting information about the current user
 
-Information about the current user can be obtained from the [session service](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/session.service.js) through the `user` property. This object has the following standard properties:
+Information about the current user can be obtained from the [session service](https://github.com/infrabel/themes-gnap/blob/master/custom/gnap-angular/js/develop/gnap/session.service.js) through the `user` property. This object has the following standard properties:
 
 {:.table}
 | Property | Description |
@@ -36,6 +36,6 @@ Other claims found in the JWT token are added as properties of the user object.
 
 ## Making authenticated REST API calls
 
-As soon as the session service has received the JWT token, all request will include the JWT token. The token is sent as a bearer token in the authentication header. Adding this header to the request is done by the [authentication interceptor](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/authentication.interceptor.js).
+As soon as the session service has received the JWT token, all request will include the JWT token. The token is sent as a bearer token in the authentication header. Adding this header to the request is done by the [authentication interceptor](https://github.com/infrabel/themes-gnap/blob/master/custom/gnap-angular/js/develop/gnap/authentication.interceptor.js).
 
 The receiving REST API must validate the token and return a 401 - Unauthorized if the token is missing. Or a 403 - Forbidden if the current user is not allowed to access the resource with the JWT token.
