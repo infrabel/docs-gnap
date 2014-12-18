@@ -6,9 +6,8 @@ next_page_url: docs/application-structure
 next_page_description: Application structure
 ---
 
-<div class="alert alert-success" role="alert">
-    GNaP.Web.Themes is a high-productivity single page application toolset that integrates the components and APIs you need for modern web application development.
-</div>
+GNaP.Web.Themes is a high-productivity single page application toolset that integrates the components and APIs you need for modern web application development.
+{: class="alert alert-success" }
 
 ## Building single page apps made easy
 

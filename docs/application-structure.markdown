@@ -13,44 +13,48 @@ In a traditional application structure you would have a folder per file or class
 **DON'T DO THIS:**
 
     src/
-    --- app/
-    ------- controllers/
-    ----------- main.controller.js
-    ----------- list.controller.js
-    ----------- new.controller.js
-    ------- views/
-    ----------- main.html
-    ----------- list.html
-    ----------- new.html
-    ------- states/
-    ----------- main.state.js
-    ----------- list.state.js
-    ----------- new.state.js
+    --- api (REST services)
+    --- web (AngularJS app)
+    ------ app/
+    ---------- controllers/
+    -------------- main.controller.js
+    -------------- list.controller.js
+    -------------- new.controller.js
+    ---------- views/
+    -------------- main.html
+    -------------- list.html
+    -------------- new.html
+    ---------- states/
+    -------------- main.state.js
+    -------------- list.state.js
+    -------------- new.state.js
 
 We favor a stucture where everything is grouped by feature. This makes it clear for everyone what the application does instead of how it work. If later on someone else has to work on your code it is immediately obvious what the main functionalities of the application are.
 
 **DO THIS:**
 
     src/
-    --- app/
-    ------- main/
-    ----------- todos/
-    --------------- list/
-    ------------------- list.state.js
-    ------------------- list.controller.js
-    ------------------- list.html
-    --------------- new/
-    ------------------- new.state.js
-    ------------------- new.controller.js
-    ------------------- new.html
-    ----------- main.state.js
-    ----------- main.controller.js
-    ----------- main.html
-    ------- app.config.js
-    ------- app.module.js
-    --- css/
-    --- vendor/
-    --- index.html
+    --- api (REST services)
+    --- web (AngularJS app)
+    ------ app/
+    ---------- main/
+    -------------- todos/
+    ------------------ list/
+    ---------------------- list.state.js
+    ---------------------- list.controller.js
+    ---------------------- list.html
+    ------------------ new/
+    ---------------------- new.state.js
+    ---------------------- new.controller.js
+    ---------------------- new.html
+    -------------- main.state.js
+    -------------- main.controller.js
+    -------------- main.html
+    ---------- app.config.js
+    ---------- app.module.js
+    ------ css/
+    ------ vendor/
+    ------ index.html
 
 ## app.module.js
 
