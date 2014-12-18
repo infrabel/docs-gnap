@@ -18,7 +18,7 @@ Basically source maps are a way to map a combined/minified file back to an unbui
 
 ## Send error reports to your server
 
-As written in the [Error handling]({{ "error-handling" | prepend: site.baseurl }}) chapter, you can subscribe for unhandled errors using the [unhandledErrorChannel](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/unhandled-error.channel.js) service. If an error occurs in your application then your function will be called with the error being passed as the first argument.
+As written in the [Error handling]({{ "error-handling" | prepend: site.baseurl }}) chapter, you can subscribe for unhandled errors using the [unhandledErrorChannel](https://github.com/infrabel/themes-gnap/blob/master/custom/gnap-angular/js/develop/gnap/unhandled-error.channel.js) service. If an error occurs in your application then your function will be called with the error being passed as the first argument.
 
 In the handling function you can then send an error report to your server by using a resource service.
 
@@ -69,4 +69,4 @@ If you're using Chrome then be sure to read their documentation on [Debugging Ja
 
 ## Supported browsers
 
-GNaP.Web.Themes is tested to work in Internet Explorer 8+. Modern browsers such as Google Chrome and Firefox have auto-update functionality and thus GNaP.Web.Themes should work fine with them.
+themes-gnap is tested to work in Internet Explorer 8+. Modern browsers such as Google Chrome and Firefox have auto-update functionality and thus themes-gnap should work fine with them.

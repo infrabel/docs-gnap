@@ -18,7 +18,7 @@ The following languages are defined by default:
 
 You can change the list of available languages in your `app.config.js` file.
 
-> TODO: describe how to change the default languages (see: https://github.com/infrabel/GNaP.Web.Themes/issues/92)
+> TODO: describe how to change the default languages (see: https://github.com/infrabel/themes-gnap/issues/92)
 
 ## Routing
 

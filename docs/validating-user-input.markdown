@@ -6,7 +6,7 @@ next_page_url: docs/error-handling
 next_page_description: Error handling
 ---
 
-GNaP.Web.Themes comes with a set of validation helpers to make validating user input easier.
+themes-gnap comes with a set of validation helpers to make validating user input easier.
 
 {% highlight html %}
 <form gnap-submit='vm.save()'>
@@ -23,7 +23,7 @@ GNaP.Web.Themes comes with a set of validation helpers to make validating user i
 
 ### gnap-submit
 
-The [gnap-submit](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/submit.directive.js) directive invokes its assigned function only when the form is in a valid state. It also keeps track of asynchronous validation methods and lets them finish before submitting the form.
+The [gnap-submit](https://github.com/infrabel/themes-gnap/blob/master/custom/gnap-angular/js/develop/gnap/submit.directive.js) directive invokes its assigned function only when the form is in a valid state. It also keeps track of asynchronous validation methods and lets them finish before submitting the form.
 
 {% highlight html %}
 <form gnap-submit='vm.save()'>
@@ -33,7 +33,7 @@ The [gnap-submit](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom
 
 ### gnap-show-validity
 
-[gnap-show-validity](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/show-validity.directive.js) applies [Bootstrap 3 validation states](http://getbootstrap.com/css/#forms-control-validation) styling for invalid input fields. If the form field specified by `for` is in an invalid state then it will add the `has-errors` class to the div it is declared on.
+[gnap-show-validity](https://github.com/infrabel/themes-gnap/blob/master/custom/gnap-angular/js/develop/gnap/show-validity.directive.js) applies [Bootstrap 3 validation states](http://getbootstrap.com/css/#forms-control-validation) styling for invalid input fields. If the form field specified by `for` is in an invalid state then it will add the `has-errors` class to the div it is declared on.
 
 {% highlight html %}
 <div gnap-show-validity for="firstName" class="form-group">
@@ -43,7 +43,7 @@ The [gnap-submit](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom
 
 ### gnap-validation-messages
 
-[gnap-validation-messages](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/validation-messages.directive.js) is a container for displaying validation messages for the form field specified by `for`. Embed one or more [gnap-validation-message](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/validation-message.directive.js) directives for each of the validation errors you want to show. Each [gnap-validation-message](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/validation-message.directive.js) directive must declare a `when` attribute that specifies the validation that is violated.
+[gnap-validation-messages](https://github.com/infrabel/themes-gnap/blob/master/custom/gnap-angular/js/develop/gnap/validation-messages.directive.js) is a container for displaying validation messages for the form field specified by `for`. Embed one or more [gnap-validation-message](https://github.com/infrabel/themes-gnap/blob/master/custom/gnap-angular/js/develop/gnap/validation-message.directive.js) directives for each of the validation errors you want to show. Each [gnap-validation-message](https://github.com/infrabel/themes-gnap/blob/master/custom/gnap-angular/js/develop/gnap/validation-message.directive.js) directive must declare a `when` attribute that specifies the validation that is violated.
 
 {% highlight html %}
 <div gnap-validation-messages for="firstName">
@@ -55,7 +55,7 @@ The [gnap-submit](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom
 
 Sometimes you need to do some validation that is not supported by the AngularJS built-in validation directives. Generally speaking you would then create your own validation directive. For an example of how to do this [check out this blog post](http://weblogs.asp.net/dwahlin/building-a-custom-angularjs-unique-value-directive). This however involves a lot of work.
 
-GNaP.Web.Themes comes with a [gnap-validate](https://github.com/infrabel/GNaP.Web.Themes/blob/master/custom/gnap-angular/js/develop/gnap/validate.directive.js) directive that you can configure with a custom validation function. This function is defined on the scope and can either return a boolean value or a promise.
+themes-gnap comes with a [gnap-validate](https://github.com/infrabel/themes-gnap/blob/master/custom/gnap-angular/js/develop/gnap/validate.directive.js) directive that you can configure with a custom validation function. This function is defined on the scope and can either return a boolean value or a promise.
 
 If a promise is returned then a loader icon will be displayed in the input field to indicate that validation is being performed. The form cannot be submitted by the user at this point as we don't yet know if the user input is valid.
 
