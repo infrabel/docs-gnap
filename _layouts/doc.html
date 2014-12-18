@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="docs">
     {% include head.html css="docs.css" %}
 
     <body>
@@ -27,15 +27,24 @@
                         </ul>
                     </div>
 
-                    <div class="page-content">
+                    <div class="page-content" ng-controller="TopicController" ng-cloak>
                         <div class="row">
-                            <div class="col-xs-12">
-                                <div class="page-header">
-                                    <h1>{{ page.title }}</h1>
+                            <div class="col-xs-12">                             
+                                <div class="page-header clearfix">
+                                    <h1 class="pull-left">{{ page.title }}</h1>
+                                    <div class="btn-group pull-right">
+                                        <label class="btn btn-primary" ng-model="platform" btn-radio="'.NET'">.NET</label>
+                                        <label class="btn btn-primary" ng-model="platform" btn-radio="'Java'">Java</label>
+                                        <label class="btn btn-primary" ng-model="platform" btn-radio="'PHP'">PHP</label>
+                                    </div>
                                 </div>
-
+                                <div class="alert alert-warning" platform="Java">
+                                    <i class="icon-warning-sign"></i> We currently do not offer a server-side implementation for Java.
+                                </div>
+                                <div class="alert alert-warning" platform="PHP">
+                                    <i class="icon-warning-sign"></i> We currently do not offer a server-side implementation for PHP.
+                                </div>
                                 {{ content }}
-
                                 {% if page.next_page_url %}
                                     <nav>
                                         <ul class="pager">
@@ -60,5 +69,14 @@
         <script src="{{ "js/ace-elements.min.js" | prepend: site.themeurl }}"></script>
         <script src="{{ "js/ace.min.js" | prepend: site.themeurl }}"></script>
         <script src="{{ "js/layout.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/angular/angular.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/angular/angular-resource.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/angular-local-storage/angular-local-storage.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/ui-bootstrap/ui-bootstrap-tpls-0.11.0.min.js" | prepend: site.themeurl }}"></script>
+
+        <script src="{{ "js/app/docs/app.modules.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/docs/app.config.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/docs/topic.controller.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "js/app/docs/platform.directive.js" | prepend: site.baseurl }}"></script>
     </body>
 </html>

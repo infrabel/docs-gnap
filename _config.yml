@@ -9,7 +9,6 @@ url: "http://gnap.io"
 # Build settings
 markdown: kramdown
 permalink: pretty
-#highlighter: rouge
 
 kramdown:
   input: GFM

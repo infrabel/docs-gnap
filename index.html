@@ -51,17 +51,57 @@ layout: home
 
 <div class="features">
     <div class="container">
+
         <div class="row">
             <div class="col-md-5">
-                <h2>Built using the AngularJS Style Guide</h2>
+                <h2>LIFT Application Structure</h2>
                 <p>
-                    We care about crafting quality-first applications as much as you do. That's why we've following the AngularJS Style Guide by <a href="https://twitter.com/john_papa">@john_papa</a>: the opinionated style guide for syntax, conventions, and structuring AngularJS applications. These styles are based on development experience with AngularJS, presentations, Pluralsight training courses and working in teams.
+                    The <a href="https://github.com/johnpapa/angularjs-styleguide#style-y140">LIFT principle</a> provides a consistent structure that scales well, is modular, and makes it easier to increase developer efficiency by <strong>finding code quickly</strong>. Instead of organizing code by class type we prefer to group files by feature.
+<pre>
+src/
+--- app/
+------- main/
+----------- todos/
+--------------- list/
+------------------- list.state.js
+------------------- list.controller.js
+------------------- list.html
+--------------- new/
+------------------- new.state.js
+------------------- new.controller.js
+------------------- new.html
+</pre>
+                </p>
+                <h2>AngularJS Style Guide</h2>
+                <p>
+                    We care about crafting quality-first applications as much as you do. That's why we've following the <a href="https://github.com/johnpapa/angularjs-styleguide">AngularJS Style Guide</a> by <a href="https://twitter.com/john_papa">@john_papa</a>: the opinionated style guide for syntax, conventions, and structuring AngularJS applications. These styles are based on development experience with AngularJS, presentations, Pluralsight training courses and working in teams.
                 </p>
             </div>
             <div class="col-md-5 col-md-offset-2">
-                <h2>Translations and date/number formatting</h2>
+                <h2>Translations</h2>
+{% highlight html %}
+    <h1>{% raw %}{{ 'welcome' | translate }}{% endraw %}</h1>
+{% endhighlight %}
+                <h2>Authentication</h2>
                 <p>
-
+                    GNaP has built-in support for authenticating using a JWT token.
+                </p>
+                <h2>Validation</h2>
+{% highlight html %}
+<form gnap-submit='vm.save()'>
+    <div gnap-show-validity for="firstName" class="form-group">
+        <label class="control-label" for="firstName">First Name</label>
+        <input ng-model="vm.firstName" type="text" class="form-control" id="firstName" name="firstName" required>
+        <div gnap-validation-messages for="firstName">
+            <div gnap-validation-message when="required">Enter the first name</div>
+        </div>
+    </div>
+    <button class="btn btn-primary">Save</button>
+</form>
+{% endhighlight %}
+                <h2>Bring Your Own Backend</h2>
+                <p>
+                    We believe developers feel more comfortable writing code in the language of their preference.
                 </p>
             </div>
         </div>
