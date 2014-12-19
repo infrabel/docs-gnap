@@ -2,6 +2,6 @@
 
 (function () {
     angular
-        .module("docs", ['ui.bootstrap',
+        .module('docs', ['ui.bootstrap',
                          'LocalStorageModule']);
 })();
