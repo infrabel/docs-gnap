@@ -31,7 +31,7 @@ layout: home
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-3">
                         <div class="icon">
-                            <i class="icon-wrench"></i>
+                            <i class="icon-github-sign"></i>
                         </div>
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-8">
@@ -46,7 +46,7 @@ layout: home
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-3 col-md-offset-1">
                         <div class="icon">
-                            <i class="icon-wrench"></i>
+                            <i class="icon-rocket"></i>
                         </div>
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-8">
@@ -63,7 +63,7 @@ layout: home
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-3">
                         <div class="icon">
-                            <i class="icon-wrench"></i>
+                            <i class="icon-puzzle-piece"></i>
                         </div>
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-8">
@@ -78,7 +78,7 @@ layout: home
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-3 col-md-offset-1">
                         <div class="icon">
-                            <i class="icon-wrench"></i>
+                            <i class="icon-exchange"></i>
                         </div>
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-8">
@@ -95,7 +95,7 @@ layout: home
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-3">
                         <div class="icon">
-                            <i class="icon-wrench"></i>
+                            <i class="icon-mobile-phone"></i>
                         </div>
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-8">
@@ -110,7 +110,7 @@ layout: home
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-3 col-md-offset-1">
                         <div class="icon">
-                            <i class="icon-wrench"></i>
+                            <i class="icon-html5"></i>
                         </div>
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-8">
@@ -127,7 +127,7 @@ layout: home
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-3">
                         <div class="icon">
-                            <i class="icon-wrench"></i>
+                            <i class="icon-group"></i>
                         </div>
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-8">
@@ -142,7 +142,7 @@ layout: home
                 <div class="row">
                     <div class="col-xs-2 col-sm-2 col-md-3 col-md-offset-1">
                         <div class="icon">
-                            <i class="icon-wrench"></i>
+                            <i class="icon-code-fork"></i>
                         </div>
                     </div>
                     <div class="col-xs-10 col-sm-10 col-md-8">
@@ -152,28 +152,22 @@ layout: home
                         </div>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
     </div>
 </div>
 
-<div class="convince-boss">
+<div class="managers">
     <div class="container">
-
-        <hr />
-
-        <h2>How to convince your boss ...</h2>
-       
+        <h2>Loved by managers</h2>
     </div>
 </div>
 
 <div class="users">
     <div class="container">
-        <h2>See who's using GNaP</h2>
-        <p>Met overlay => als ge erover hoovert -> uitleg over hoe ze gnap gebruiken + projecten</p>
+        <h2>See who's using GNaP</h2>        
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-
                 <span class="user">
                     <a href="http://www.infrabel.be">
                         <span class="logo">
@@ -181,7 +175,6 @@ layout: home
                         </span>
                     </a>
                 </span>
-
                 <span class="user">
                     <a href="https://www.moneycloud.be">
                         <span class="logo">
@@ -189,7 +182,6 @@ layout: home
                         </span>
                     </a>
                 </span>
-
                 <span class="user">
                     <a href="http://www.cumps.be">
                         <span class="logo">
@@ -197,7 +189,6 @@ layout: home
                         </span>
                     </a>
                 </span>
-
                 <span class="user">
                     <a href="http://www.demareg.be">
                         <span class="logo">
@@ -205,7 +196,6 @@ layout: home
                         </span>
                     </a>
                 </span>
-
                 <span class="user">
                     <a href="http://www.infomat.be">
                         <span class="logo">
@@ -213,7 +203,6 @@ layout: home
                         </span>
                     </a>
                 </span>
-
                 <span class="user">
                     <a href="http://www.greenfieldconsulting.be">
                         <span class="logo">
@@ -224,23 +213,6 @@ layout: home
             </div>
         </div>
     </div>
-    
-</div>
-
-<div class="blog">
-<h2>Blog</h2>
-                <ul class="post-list">
-                    {% for post in site.posts %}
-                        <li>
-                            <h3>
-                                <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
-                            </h3>
-                            <p>
-                                {{ post.excerpt }}
-                            </p>
-                        </li>
-                    {% endfor %}
-                </ul>
 </div>
 
 <div class="team">
@@ -275,6 +247,18 @@ layout: home
 
 <div class="footer">
     <div class="container">
-        
+        <h2>Blog</h2>
+        <ul class="post-list">
+            {% for post in site.posts %}
+                <li>
+                    <h3>
+                        <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+                    </h3>
+                    <p>
+                        {{ post.excerpt }}
+                    </p>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
