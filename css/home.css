@@ -48,7 +48,7 @@ body {
     font-size: 35px;
 }
 
-.development-experience .row {
+.development-experience .row .row {
     margin-top: 40px;
 }
 
@@ -70,6 +70,43 @@ body {
     font-size: 16px;
     line-height: 26px;
     text-align: justify;
+}
+
+.usage {
+    background-color: #fff;
+    background-image: url('../images/example.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 80px 0 130px 0;
+}
+
+.usage h2 {
+    margin: 0 0 60px 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 48px;
+}
+
+.usage pre {
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    border: none;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.usage pre span.yo-question {
+    color: #fff;
+}
+
+.usage pre span.light-grey {
+    color: #aaa;
+}
+
+.usage pre span.gnap-blue {
+    color: #00AEEF;
 }
 
 .users {
