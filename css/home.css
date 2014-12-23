@@ -38,7 +38,7 @@ body {
 
 .development-experience {
     background-color: #fff;
-    padding-bottom: 60px;
+    padding-bottom: 90px;
 }
 
 .development-experience h2 {
@@ -48,8 +48,8 @@ body {
     font-size: 35px;
 }
 
-.development-experience .row .row {
-    margin-bottom: 40px;
+.development-experience .row {
+    margin-top: 40px;
 }
 
 .development-experience div.icon {
@@ -62,6 +62,8 @@ body {
     height: 1.7em;
     width: 1.7em;
     color: #333;
+    display: inline-block;
+    padding-top: 0.05em;
 }
 
 .development-experience p {
