@@ -1,0 +1,105 @@
+[
+     {
+        "title":"Theme",
+        "description": "The packages that are used to build the default GNaP theme files.",
+        "projects":[
+            {
+                "name": "generator-gnap",
+                "description":"Yeoman generator for GNaP applications.",
+                "url":"https://github.com/infrabel/generator-gnap",
+                "packages":[
+                    {
+                        "npm":["generator-gnap"]
+                    }
+                ]
+            },
+            {
+                "name":"themes-gnap",
+                "description":"Standardized build to produce web themes for use with GNaP.",
+                "url":"https://github.com/infrabel/themes-gnap",
+                "packages":[
+                    {
+                        "title": "gnap-theme-gnap",
+                        "nuget": ["GNaP.Themes.Web.GNaP"],
+                        "npm": ["gnap-theme-gnap"]
+                    },
+                    {
+                        "title": "gnap-theme-gnap-angular",
+                        "nuget": ["GNaP.Themes.Web.GNaP.Angular"],
+                        "npm": ["gnap-theme-gnap-angular"]
+                    },
+                    {
+                        "title": "gnap-theme-sample",
+                        "nuget": ["GNaP.Themes.Web.Sample"],
+                        "npm": ["gnap-theme-sample"]
+                    }
+                ]
+            }
+        ]
+     },
+     {
+        "title":".NET",
+        "description": "Packages for the .NET framework.",
+        "projects":[
+            {
+                "name":"GNaP.Common",
+                "description":"Common base libraries for GNaP.",
+                "url":"https://github.com/infrabel/GNaP.Common",
+                "packages":[
+                    {
+                        "nuget":["GNaP.Common"]
+                    }
+                ]
+            },
+            {
+                "name":"GNaP.DependencyInjection.StructureMap",
+                "description":"StructureMap IoC implementation for GNaP.",
+                "url":"https://github.com/infrabel/GNaP.DependencyInjection.StructureMap",
+                "packages":[
+                    {
+                        "nuget":["GNaP.DependencyInjection.StructureMap"]
+                    }
+                ]
+            },
+            {
+                "name":"GNaP.DependencyInjection.Ninject",
+                "description":"Ninject IoC implementation for GNaP.",
+                "url":"https://github.com/infrabel/GNaP.DependencyInjection.Ninject",
+                "packages":[
+                    {
+                        "nuget":["GNaP.DependencyInjection.Ninject"]
+                    }
+                ]
+            },
+            {
+                "name":"GNaP.WebApi.Versioning",
+                "description":"Standardized way to do versioning with Web API.",
+                "url":"https://github.com/infrabel/GNaP.WebApi.Versioning",
+                "packages":[
+                    {
+                        "nuget":["GNaP.WebApi.Versioning"]
+                    }
+                ]
+            },
+            {
+                "name":"GNaP.Owin.Authentication.Jwt",
+                "description":"Owin middleware to issue JSON Web Tokens.",
+                "url":"https://github.com/infrabel/GNaP.Owin.Authentication.Jwt",
+                "packages":[
+                    {
+                        "nuget":["GNaP.Owin.Authentication.Jwt"]
+                    }
+                ]
+            }
+        ]
+     },
+     {
+        "title":"Servers",
+        "description": "Stand-alone servers",
+        "projects":[
+            {
+                "name":"wiki-gnap"
+            }
+        ]
+     }
+]

@@ -1,0 +1,205 @@
+body {
+    background-color: rgb(57, 57, 57); 
+}
+
+.hero {
+    color: #fff;
+    padding: 60px 0 80px 0;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 42px;
+}
+
+.hero p {
+    line-height: 40px;
+    font-size: 22px;
+    margin: 30px 0 30px 0;
+}
+
+.install {
+    background-color: #00AEEF;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 0 10px 0;
+}
+
+.install .terminal {
+    display: inline-block;
+    background-color: #00739E;
+    color: #fff;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+}
+
+.development-experience {
+    background-color: #fff;
+    padding-bottom: 90px;
+}
+
+.development-experience h2 {
+    margin: 80px 0 60px 0;
+    color: #005CA3;
+    text-align: center;
+    font-size: 35px;
+}
+
+.development-experience .row .row {
+    margin-top: 40px;
+}
+
+.development-experience div.icon {
+    font-size: 3em;
+    text-align: center;
+    border: 1px solid #333;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    height: 1.7em;
+    width: 1.7em;
+    color: #333;
+    display: inline-block;
+    padding-top: 0.05em;
+}
+
+.development-experience p {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: justify;
+}
+
+.usage {
+    background-color: #fff;
+    background-image: url('../images/example.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 80px 0 130px 0;
+}
+
+.usage h2 {
+    margin: 0 0 60px 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 48px;
+}
+
+.usage pre {
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    border: none;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.usage pre span.yo-question {
+    color: #fff;
+}
+
+.usage pre span.light-grey {
+    color: #aaa;
+}
+
+.usage pre span.gnap-blue {
+    color: #00AEEF;
+}
+
+.users {
+    background-color: #fff;
+    padding-bottom: 110px; 
+    text-align: center;
+}
+
+.users .container {
+    border-top: 1px dotted #ccc;
+}
+
+.users h2 {
+    margin: 100px 0 70px 0;
+}
+
+.users .user {
+    display: inline-block;
+}
+
+.users a {
+    display: inline-block;
+    width: 200px;
+    height: 200px; 
+    background-color: #f0f0f0;
+    display: table;
+    overflow: hidden;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: url(#greyscale);
+    filter: gray;
+    transition: 0.5s;
+}
+
+.users a:hover {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    filter: none;
+}
+
+.users a span {
+    display: block;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.blog {
+    background-color: #fff;
+    padding-bottom: 60px;    
+}
+
+.team {
+    padding: 70px 0 90px 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.team h2 {
+    margin-bottom: 60px;
+}
+
+.team strong {
+    color: #555;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.team p {
+    font-size: 14px;
+    margin: 10px 0 0 0;
+}
+
+.team img {
+    width: 114px;
+    height: 114px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    border: 4px solid #C0C0C0;
+}
+
+.footer {
+    color: #fff;
+    padding: 40px 0 40px 0;
+}
+
+.footer h2, .footer .post-list h3 a {
+    color: #fff;
+}
+
+.footer .post-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  <meta charset="utf-8" />
+  <title>GNaP</title>
+
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/node_modules/gnap-theme-gnap-angular/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/font-awesome.min.css" />
+
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/font-awesome-ie7.min.css" />
+  <![endif]-->
+
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/ace-fonts.min.css" />
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/ace.min.css" />
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/ace-skins.min.css" />
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/print.min.css" media="print" />
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/ace-ie.min.css" />
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/ie8.min.css" />
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="/node_modules/gnap-theme-gnap-angular/js/html5shiv.min.js"></script>
+  <script src="/node_modules/gnap-theme-gnap-angular/js/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/ie9.min.css" />
+
+  <link rel="stylesheet" href="/css/jekyll-syntax/default.css" />
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/home.css" />
+
+  <script src="/node_modules/gnap-theme-gnap-angular/js/modernizr.min.js"></script>
+
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+
+
+    <body>
+        <div class="topbar">
+            <div class="container">
+                <div class="navbar navbar-default" id="navbar">
+    <div class="navbar-container" id="navbar-container">
+        <div class="navbar-header pull-left">
+            <a href="/" class="navbar-brand">
+                <small>
+                    <i class="team-logo"></i>
+
+                    <!-- GNaP -->
+                </small>
+            </a>
+        </div>
+        
+        <div class="navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li><a href="/docs"><i class="icon-file"></i>Documentation</a></li>
+                <li><a href="/"><i class="icon-youtube-play"></i> Videos</a></li>
+                <li><a href="/releases"><i class="icon-tags"></i>Releases</a></li>
+                <li><a href="/gnap/update/2014/12/09/introducing-gnap/"><i class="icon-file"></i>Blog</a></li>
+                <li><a href="https://www.github.com/infrabel" target="_blank"><i class="icon-github"></i> GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+
+        <div class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>The starting point for building modern applications</h1>
+                <p>GNaP is a free high-productivity toolset that integrates the components and APIs you need for modern application development.</p>
+                <a href="/docs" class="btn btn-success btn-lg">Getting started <span aria-hidden="true">&rarr;</span></a>
+            </div>
+            <div class="col-md-4 hidden-xs hidden-sm">
+                <img src="/images/gnap.png" class="img-responsive" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="install">
+    <div class="container">
+        One line install using npm: <span class="terminal">npm install -g generator-gnap</span>
+    </div>
+</div>
+
+<div class="development-experience">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h2>A delightfull development experience</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-3">
+                                <div class="icon">
+                                    <i class="icon-rocket"></i>
+                                </div>
+                            </div>
+                            <div class="col-xs-10 col-sm-10 col-md-8">
+                                <div class="text">
+                                    <h3>Write less code</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-3">
+                                <div class="icon">
+                                    <i class="icon-mobile-phone"></i>
+                                </div>
+                            </div>
+                            <div class="col-xs-10 col-sm-10 col-md-8">
+                                <div class="text">
+                                    <h3>Works on any screen</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-3">
+                                <div class="icon">
+                                    <i class="icon-exchange"></i>
+                                </div>
+                            </div>
+                            <div class="col-xs-10 col-sm-10 col-md-8">
+                                <div class="text">
+                                    <h3>Use any backend</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-3">
+                                <div class="icon">
+                                    <i class="icon-puzzle-piece"></i>
+                                </div>
+                            </div>
+                            <div class="col-xs-10 col-sm-10 col-md-8">
+                                <div class="text">
+                                    <h3>Flexible</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-3">
+                                <div class="icon">
+                                    <i class="icon-github-sign"></i>
+                                </div>
+                            </div>
+                            <div class="col-xs-10 col-sm-10 col-md-8">
+                                <div class="text">
+                                    <h3>Open source</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-xs-2 col-sm-2 col-md-3">
+                                <div class="icon">
+                                    <i class="icon-group"></i>
+                                </div>
+                            </div>
+                            <div class="col-xs-10 col-sm-10 col-md-8">
+                                <div class="text">
+                                    <h3>Actively maintained</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="usage">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Scaffolding built-in!</h2>
+                <div class="terminal">
+<pre><code><span class="grey">λ</span> <span class="light-grey">yo gnap</span>
+
+     <span class="light-grey">_-----_</span>
+    <span class="light-grey">|       |</span>    <span class="light-grey">.--------------------------.</span>
+    |<span class="red">--(o)--</span>|    <span class="light-grey">|      <span class="green">Welcome to the</span>      |</span>
+   <span class="light-grey">`---------´</span>   <span class="light-grey">|     <span class="green">outstanding</span> <span class="gnap-blue">GNaP</span>     |</span>
+    <span class="green">(</span> <span class="light-grey">_</span><span class="green">´U`</span><span class="light-grey">_</span> <span class="green">)</span>    <span class="light-grey">|        <span class="green">generator!</span>        |</span>
+    <span class="light-grey">/___A___\</span>    <span class="light-grey">'--------------------------'</span>
+     <span class="light-grey">|  ~  |</span>
+   <span class="light-grey">__'.___.'__</span>
+ <span class="light-grey">´</span>   <span class="red">`</span>  <span class="red">|</span><span class="light-grey">°</span> <span class="red">´ Y</span> <span class="light-grey">`</span>
+
+<span class="green">?</span> What is the project name of your application? todo-app
+<span class="green">?</span> What is the title of your application? Todo App
+<span class="green">?</span> Which theme does your application use? gnap-theme-gnap-angular
+<span class="green">?</span> Which port should the development server run on? 9000
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="users">
+    <div class="container">
+        <h2>See who's using GNaP</h2>        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <span class="user">
+                    <a href="http://www.infrabel.be">
+                        <span class="logo">
+                            <img src="/images/users/infrabel.png" class="img-responsive" />
+                        </span>
+                    </a>
+                </span>
+                <span class="user">
+                    <a href="https://www.moneycloud.be">
+                        <span class="logo">
+                            <img src="/images/users/moneycloud.png" class="img-responsive" />
+                        </span>
+                    </a>
+                </span>
+                <span class="user">
+                    <a href="http://www.cumps.be">
+                        <span class="logo">
+                            <img src="/images/users/cumps.png" class="img-responsive" />
+                        </span>
+                    </a>
+                </span>
+                <span class="user">
+                    <a href="http://www.demareg.be">
+                        <span class="logo">
+                            <img src="/images/users/demareg.png" class="img-responsive" />
+                        </span>
+                    </a>
+                </span>
+                <span class="user">
+                    <a href="http://www.infomat.be">
+                        <span class="logo">
+                            <img src="/images/users/infomat.png" class="img-responsive" />
+                        </span>
+                    </a>
+                </span>
+                <span class="user">
+                    <a href="http://www.greenfieldconsulting.be">
+                        <span class="logo">
+                            <img src="/images/users/greenfield.png" class="img-responsive" />
+                        </span>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="team">
+    <div class="container">
+        <h2>Core Contributors</h2>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-3">
+                <img src="/images/stijn.jpg"  />
+                <h5>Stijn Roosen</h5>
+                <div><a href="https://github.com/sroosen"><i class="icon-github"></i> sroosen</a></div>
+                <div><a href="https://twitter.com/stijnroosen"><i class="icon-twitter"></i> stijnroosen</a></div>
+                <div><a href="https://be.linkedin.com/pub/stijn-roosen/2/918/249"><i class="icon-linkedin"></i> Stijn Roosen</a></div>
+            </div>
+            <div class="col-md-2">
+                <img src="/images/david.png"  />
+                <h5>David Cumps</h5>
+                <div><a href="https://github.com/CumpsD"><i class="icon-github"></i> CumpsD</a></div>
+                <div><a href="https://twitter.com/CumpsD"><i class="icon-twitter"></i> CumpsD</a></div>
+                <div><a href="https://be.linkedin.com/in/cumpsd"><i class="icon-linkedin"></i> David Cumps</a></div>
+            </div>
+            <div class="col-md-2">
+              <img src="/images/gert.jpg"  />
+              <p>
+                <h5>Gert Servranckx</h5>
+                <div><a href="https://github.com/servranckxg"><i class="icon-github"></i> servranckxg</a></div>
+                <div><a href="https://be.linkedin.com/in/servranckxg"><i class="icon-linkedin"></i> Gert Servranckx</a></div>
+              </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <h2>Blog</h2>
+        <ul class="post-list">
+            
+                <li>
+                    <h3>
+                        <a class="post-link" href="/gnap/update/2014/12/09/introducing-gnap/">Introducing GNaP!</a>
+                    </h3>
+                    <p>
+                        <p>Blah blah blah</p>
+
+
+                    </p>
+                </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+        <script type="text/javascript">
+            window.jQuery || document.write("<script src='/node_modules/gnap-theme-gnap-angular/js/jquery.min.js'>"+"<"+"/script>");
+        </script>
+        <script type="text/javascript">
+            if("ontouchend" in document) document.write("<script src='/node_modules/gnap-theme-gnap-angular/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+        </script>
+        <script src="/node_modules/gnap-theme-gnap-angular/js/bootstrap.min.js"></script>
+        <script src="/node_modules/gnap-theme-gnap-angular/js/ace-elements.min.js"></script>
+        <script src="/node_modules/gnap-theme-gnap-angular/js/ace.min.js"></script>
+        <script src="/node_modules/gnap-theme-gnap-angular/js/layout.min.js"></script>
+    </body>
+</html>

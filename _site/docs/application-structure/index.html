@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="docs">
+    <head>
+  <meta charset="utf-8" />
+  <title>Application Structure - GNaP</title>
+
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/node_modules/gnap-theme-gnap-angular/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/font-awesome.min.css" />
+
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/font-awesome-ie7.min.css" />
+  <![endif]-->
+
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/ace-fonts.min.css" />
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/ace.min.css" />
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/ace-skins.min.css" />
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/print.min.css" media="print" />
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/ace-ie.min.css" />
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/ie8.min.css" />
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="/node_modules/gnap-theme-gnap-angular/js/html5shiv.min.js"></script>
+  <script src="/node_modules/gnap-theme-gnap-angular/js/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="/node_modules/gnap-theme-gnap-angular/css/ie9.min.css" />
+
+  <link rel="stylesheet" href="/css/jekyll-syntax/default.css" />
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/docs.css" />
+
+  <script src="/node_modules/gnap-theme-gnap-angular/js/modernizr.min.js"></script>
+
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+
+
+    <body>
+        <div class="navbar navbar-default" id="navbar">
+    <div class="navbar-container" id="navbar-container">
+        <div class="navbar-header pull-left">
+            <a href="/" class="navbar-brand">
+                <small>
+                    <i class="team-logo"></i>
+
+                    <!-- GNaP -->
+                </small>
+            </a>
+        </div>
+        
+        <div class="navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li><a href="/docs"><i class="icon-file"></i>Documentation</a></li>
+                <li><a href="/"><i class="icon-youtube-play"></i> Videos</a></li>
+                <li><a href="/releases"><i class="icon-tags"></i>Releases</a></li>
+                <li><a href="/gnap/update/2014/12/09/introducing-gnap/"><i class="icon-file"></i>Blog</a></li>
+                <li><a href="https://www.github.com/infrabel" target="_blank"><i class="icon-github"></i> GitHub</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+        <div class="main-container" id="main-container">
+            <div class="main-container-inner">
+                <a class="menu-toggler" id="menu-toggler" href="#">
+                    <span class="menu-text"></span>
+                </a>
+                <div class="sidebar" id="sidebar">
+                    <ul class="nav nav-list">
+    <li class="">
+        <a href="/docs">
+            <i class="icon-bolt"></i>
+            <span class="menu-text"> Getting Started</span>
+        </a>
+    </li>
+    <li class="active">
+        <a href="/docs/application-structure">
+            <i class="icon-tasks"></i>
+            <span class="menu-text"> Application structure</span>
+        </a>
+    </li>
+    <li class="">
+        <a href="/docs/configuring-your-application">
+            <i class="icon-gears"></i>
+            <span class="menu-text"> Configuring your application</span>
+        </a>
+    </li>
+    <li class="">
+        <a href="/docs/states-controllers-views">
+            <i class="icon-compass"></i>
+            <span class="menu-text"> States, controllers &amp; views</span>
+        </a>
+    </li>
+    <li class="">
+        <a href="/docs/working-with-a-rest-api">
+            <i class="icon-code"></i>
+            <span class="menu-text"> Working with a REST API</span>
+        </a>
+    </li>
+    <li class="">
+        <a href="/docs/authenticating-using-a-jwt-token">
+            <i class="icon-lock"></i>
+            <span class="menu-text"> Authenticating using a JWT token</span>
+        </a>
+    </li>
+    <li class="">
+        <a href="/docs/internationalization">
+            <i class="icon-globe"></i>
+            <span class="menu-text"> Internationalization (I18n)</span>
+        </a>
+    </li>
+    <li class="">
+        <a href="/docs/validating-user-input">
+            <i class="icon-check"></i>
+            <span class="menu-text"> Validating user input</span>
+        </a>
+    </li>
+    <li class="">
+        <a href="/docs/error-handling">
+            <i class="icon-warning-sign"></i>
+            <span class="menu-text"> Error handling</span>
+        </a>
+    </li>
+    <li class="">
+        <a href="/docs/putting-your-application-in-production">
+            <i class="icon-flag-checkered"></i>
+            <span class="menu-text"> Putting your application in production</span>
+        </a>
+    </li>
+    <li class="">
+        <a href="/docs/troubleshooting-your-application">
+            <i class="icon-terminal"></i>
+            <span class="menu-text"> Troubleshooting your application</span>
+        </a>
+    </li>
+</ul>
+
+                </div>
+
+                <div class="main-content">
+                    <div class="breadcrumbs" id="breadcrumbs">
+                        <ul class="breadcrumb">
+                            <li>
+                                <i class="icon-home home-icon"></i>
+                                <a href="/">Home</a>
+                            </li>
+                            <li><a href="/docs">Documentation</a></lI>
+
+                            <li class="active">Application Structure</li>
+                        </ul>
+                    </div>
+
+                    <div class="page-content" ng-controller="TopicController" ng-cloak>
+                        <div class="row">
+                            <div class="col-xs-12">                             
+                                <div class="page-header clearfix">
+                                    <h1 class="pull-left">Application Structure</h1>
+                                    <!--
+                                    <div class="btn-group pull-right">
+                                        <label class="btn btn-primary" ng-model="platform" btn-radio="'.NET'">.NET</label>
+                                        <label class="btn btn-primary" ng-model="platform" btn-radio="'Java'">Java</label>
+                                        <label class="btn btn-primary" ng-model="platform" btn-radio="'PHP'">PHP</label>
+                                    </div>
+                                    -->
+                                </div>
+                                <div class="alert alert-warning" platform="Java">
+                                    <i class="icon-warning-sign"></i> We currently do not offer a server-side implementation for Java.
+                                </div>
+                                <div class="alert alert-warning" platform="PHP">
+                                    <i class="icon-warning-sign"></i> We currently do not offer a server-side implementation for PHP.
+                                </div>
+                                <p>The most important aspect about your application structure is the fact that everything should be organized by feature instead of class type.</p>
+
+<p>In a traditional application structure you would have a folder per file or class type:</p>
+
+<p><strong>DON’T DO THIS:</strong></p>
+
+<pre><code>src/
+--- api (REST services)
+--- web (AngularJS app)
+------ app/
+---------- controllers/
+-------------- main.controller.js
+-------------- list.controller.js
+-------------- new.controller.js
+---------- views/
+-------------- main.html
+-------------- list.html
+-------------- new.html
+---------- states/
+-------------- main.state.js
+-------------- list.state.js
+-------------- new.state.js
+</code></pre>
+
+<p>We favor a stucture where everything is grouped by feature. This makes it clear for everyone what the application does instead of how it work. If later on someone else has to work on your code it is immediately obvious what the main functionalities of the application are.</p>
+
+<p><strong>DO THIS:</strong></p>
+
+<pre><code>src/
+--- api (REST services)
+--- web (AngularJS app)
+------ app/
+---------- main/
+-------------- todos/
+------------------ list/
+---------------------- list.state.js
+---------------------- list.controller.js
+---------------------- list.html
+------------------ new/
+---------------------- new.state.js
+---------------------- new.controller.js
+---------------------- new.html
+-------------- main.state.js
+-------------- main.controller.js
+-------------- main.html
+---------- app.config.js
+---------- app.module.js
+------ css/
+------ vendor/
+------ index.html
+</code></pre>
+
+<h2 id="appmodulejs">app.module.js</h2>
+
+<p>Configures your application module and declares the modules to import.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+<span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">angular</span>
+        <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;gnap-web-themes-docs&#39;</span><span class="p">,</span>
+                <span class="p">[</span><span class="s1">&#39;gnap&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;ngSanitize&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;ngResource&#39;</span><span class="p">]);</span>
+<span class="p">})();</span></code></pre></div>
+
+<h2 id="appconfigjs">app.config.js</h2>
+
+<p>Configures your application. Write your module run and config functions here to configure your application.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+
+<span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">angular</span>
+        <span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;gnap-web-themes-docs&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">config</span><span class="p">(</span><span class="nx">titleConfiguration</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">config</span><span class="p">(</span><span class="nx">urlRouterConfiguration</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">config</span><span class="p">(</span><span class="nx">authConfiguration</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="nx">handleStateChangeError</span><span class="p">);</span>
+
+    <span class="nx">titleConfiguration</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;titleServiceProvider&#39;</span><span class="p">];</span>
+
+    <span class="kd">function</span> <span class="nx">titleConfiguration</span><span class="p">(</span><span class="nx">titleServiceProvider</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// title configuration goes here</span>
+    <span class="p">}</span>
+
+    <span class="nx">urlRouterConfiguration</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$urlRouterProvider&#39;</span><span class="p">];</span>
+
+    <span class="kd">function</span> <span class="nx">urlRouterConfiguration</span><span class="p">(</span><span class="nx">$urlRouterProvider</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// url router configuration goes here</span>
+    <span class="p">}</span>
+
+    <span class="nx">authConfiguration</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$httpProvider&#39;</span><span class="p">];</span>
+
+    <span class="kd">function</span> <span class="nx">authConfiguration</span><span class="p">(</span><span class="nx">$httpProvider</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// auth configuration goes here</span>
+    <span class="p">}</span>
+
+    <span class="nx">handleStateChangeError</span><span class="p">.</span><span class="nx">$inject</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;$rootScope&#39;</span><span class="p">,</span> <span class="s1">&#39;$state&#39;</span><span class="p">,</span> <span class="s1">&#39;$location&#39;</span><span class="p">,</span> <span class="s1">&#39;sessionService&#39;</span><span class="p">,</span> <span class="s1">&#39;unhandledErrorChannel&#39;</span><span class="p">];</span>
+
+    <span class="kd">function</span> <span class="nx">handleStateChangeError</span><span class="p">(</span><span class="nx">$rootScope</span><span class="p">,</span> <span class="nx">$state</span><span class="p">,</span> <span class="nx">$location</span><span class="p">,</span> <span class="nx">sessionService</span><span class="p">,</span> <span class="nx">unhandledErrorChannel</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// handle state change errors here</span>
+    <span class="p">}</span>
+<span class="p">})();</span></code></pre></div>
+
+
+                                
+                                    <nav>
+                                        <ul class="pager">
+                                            <li class="next"><a href="/docs/configuring-your-application">Next: Configuring your application <span aria-hidden="true">&rarr;</span></a></li>
+                                        </ul>
+                                    </nav>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            window.jQuery || document.write("<script src='/node_modules/gnap-theme-gnap-angular/js/jquery.min.js'>"+"<"+"/script>");
+        </script>
+        <script type="text/javascript">
+            if("ontouchend" in document) document.write("<script src='/node_modules/gnap-theme-gnap-angular/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+        </script>
+        <script src="/node_modules/gnap-theme-gnap-angular/js/bootstrap.min.js"></script>
+        <script src="/node_modules/gnap-theme-gnap-angular/js/ace-elements.min.js"></script>
+        <script src="/node_modules/gnap-theme-gnap-angular/js/ace.min.js"></script>
+        <script src="/node_modules/gnap-theme-gnap-angular/js/layout.min.js"></script>
+        <script src="/node_modules/gnap-theme-gnap-angular/js/angular/angular.min.js"></script>
+        <script src="/node_modules/gnap-theme-gnap-angular/js/angular/angular-resource.min.js"></script>
+        <script src="/node_modules/gnap-theme-gnap-angular/js/angular-local-storage/angular-local-storage.min.js"></script>
+        <script src="/node_modules/gnap-theme-gnap-angular/js/ui-bootstrap/ui-bootstrap-tpls-0.11.0.min.js"></script>
+
+        <script src="/js/app/docs/app.modules.js"></script>
+        <script src="/js/app/docs/app.config.js"></script>
+        <script src="/js/app/docs/topic.controller.js"></script>
+        <script src="/js/app/docs/platform.directive.js"></script>
+    </body>
+</html>

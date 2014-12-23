@@ -1,0 +1,14 @@
+{
+  "name": "docs-gnap",
+  "version": "1.0.0",
+  "description": "GNaP Documentation",
+  "author": "Infrabel",
+  "keywords": [
+    "ui",
+    "gnap",
+	"docs"
+  ],
+  "dependencies": {
+    "gnap-theme-gnap-angular": "^0.22.0"
+  }
+}
