@@ -70,15 +70,18 @@ body {
     text-align: justify;
 }
 
-.convince-boss {
-    background-color: #fff;
-    padding-bottom: 60px;
-}
-
 .users {
     background-color: #fff;
-    padding-bottom: 60px; 
+    padding-bottom: 110px; 
     text-align: center;
+}
+
+.users .container {
+    border-top: 1px dotted #ccc;
+}
+
+.users h2 {
+    margin: 100px 0 70px 0;
 }
 
 .users .user {
@@ -87,10 +90,8 @@ body {
 
 .users a {
     display: inline-block;
-    
     width: 200px;
     height: 200px; 
-
     background-color: #f0f0f0;
     display: table;
     overflow: hidden;
@@ -98,14 +99,11 @@ body {
     filter: grayscale(100%);
     filter: url(#greyscale);
     filter: gray;
-
-
     transition: 0.5s;
 }
 
 .users a:hover {
-
-        -webkit-filter: grayscale(0);
+    -webkit-filter: grayscale(0);
     filter: grayscale(0);
     filter: none;
 }
@@ -123,13 +121,13 @@ body {
 }
 
 .team {
-    padding: 40px 0 50px 0;
+    padding: 70px 0 90px 0;
     background-color: #f0f0f0;
     text-align: center;
 }
 
 .team h2 {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .team strong {
