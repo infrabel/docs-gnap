@@ -79,6 +79,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     padding: 80px 0 130px 0;
+    -ms-behavior: url(/css/backgroundsize.htc);
 }
 
 .usage h2 {
@@ -90,6 +91,7 @@ body {
 }
 
 .usage pre {
+    background: #000;
     background: rgba(0,0,0,0.4);
     color: #fff;
     border: none;
@@ -202,4 +204,11 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
