@@ -41,15 +41,15 @@ body {
     padding-bottom: 90px;
 }
 
+.development-experience .feature {
+    margin-bottom: 40px;
+}
+
 .development-experience h2 {
     margin: 80px 0 60px 0;
     color: #005CA3;
     text-align: center;
     font-size: 35px;
-}
-
-.development-experience .row .row {
-    margin-top: 40px;
 }
 
 .development-experience div.icon {
@@ -64,6 +64,11 @@ body {
     color: #333;
     display: inline-block;
     padding-top: 0.05em;
+    margin-right: 5px;
+}
+
+.development-experience div.text {
+    margin-left: 5px;
 }
 
 .development-experience p {
@@ -162,7 +167,7 @@ body {
 }
 
 .team {
-    padding: 70px 0 90px 0;
+    padding: 70px 0 50px 0;
     background-color: #f0f0f0;
     text-align: center;
 }
@@ -175,6 +180,10 @@ body {
     color: #555;
     font-size: 18px;
     font-weight: normal;
+}
+
+.team .contributor {
+    margin-bottom: 40px;
 }
 
 .team p {
@@ -207,8 +216,5 @@ body {
 }
 
 .img-responsive {
-    display: block;
-    max-width: 100%;
     width: 100%;
-    height: auto;
 }
