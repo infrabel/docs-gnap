@@ -2,7 +2,7 @@
 
 (function () {
     angular
-        .module("releases")
+        .module('releases')
         .config(function($interpolateProvider){
             $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
         });

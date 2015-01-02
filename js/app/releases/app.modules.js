@@ -2,5 +2,7 @@
 
 (function () {
     angular
-        .module("releases", ['ngResource', 'angularMoment', 'ui.bootstrap']);
+        .module('releases', ['ui.bootstrap',
+                             'ngResource',
+                             'angularMoment']);
 })();
