@@ -251,18 +251,12 @@ layout: home
 
 <div class="footer">
     <div class="container">
-        <h2>Blog</h2>
-        <ul class="post-list">
-            {% for post in site.posts %}
-                <li>
-                    <h3>
-                        <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
-                    </h3>
-                    <p>
-                        {{ post.excerpt }}
-                    </p>
-                </li>
-            {% endfor %}
-        </ul>
+        <div class="footer-content">
+            <div>Copyright © 2014-2015 Infrabel and contributors</div>
+            <div class="links">
+                <div><a href="https://github.com/infrabel"><i class="icon-github"></i> Fork on GitHub</a></div>
+                <div><a href="https://twitter.com/gnap_io"><i class="icon-twitter"></i> Follow on Twitter</a></div>
+            </div>
+        </div>
     </div>
 </div>

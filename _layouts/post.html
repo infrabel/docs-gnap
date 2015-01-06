@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     {% include head.html css="blog.css" %}
-
     <body>
         <div class="topbar">
             <div class="container">
                 {% include topbar.html %}
             </div>
         </div>
-
         <div class="container">
             <div class="page-header">
                 <h1>
@@ -16,7 +14,6 @@
                     <small>News from the development team</small>
                 </h1>
             </div>
-
             <div class="row">
                 <div class="col-md-8">
                     <div class="post">
@@ -42,9 +39,7 @@
                     </ul>
                 </div>
             </div>
-
         </div>
-
         <script type="text/javascript">
             window.jQuery || document.write("<script src='{{ "js/jquery.min.js" | prepend: site.themeurl }}'>"+"<"+"/script>");
         </script>
@@ -55,16 +50,5 @@
         <script src="{{ "js/ace-elements.min.js" | prepend: site.themeurl }}"></script>
         <script src="{{ "js/ace.min.js" | prepend: site.themeurl }}"></script>
         <script src="{{ "js/layout.min.js" | prepend: site.themeurl }}"></script>
-        <script src="{{ "js/angular/angular.min.js" | prepend: site.themeurl }}"></script>
-        <script src="{{ "js/angular/angular-resource.min.js" | prepend: site.themeurl }}"></script>
-        <script src="{{ "js/moment.min.js" | prepend: site.themeurl }}"></script>
-
-        <script src="{{ "js/vendor/angular-moment.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "js/vendor/underscore.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "js/app/releases/app.modules.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "js/app/releases/app.config.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "js/app/releases/projects.controller.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "js/app/releases/categories.resource.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "js/app/releases/releases.resource.js" | prepend: site.baseurl }}"></script>
     </body>
 </html>

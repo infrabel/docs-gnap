@@ -110,3 +110,7 @@ pre code {
     border-right: none;
   }
 }
+
+.twitter-tweet {
+    display: none;
+}

@@ -201,18 +201,27 @@ body {
 }
 
 .footer {
-    color: #fff;
-    padding: 40px 0 40px 0;
+    padding: 60px 0 40px 0;
 }
 
-.footer h2, .footer .post-list h3 a {
+.footer .footer-content {
+    background-image: url(../images/logo-footer.png);
+    background-size: 84px 84px;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 0 0 30px 110px;
+}
+
+.footer .footer-content a {
     color: #fff;
 }
 
-.footer .post-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.footer .footer-content .links {
+    margin-top: 15px;
+}
+
+.footer .footer-content .links a {
+    color: #bbb;
 }
 
 .img-responsive {

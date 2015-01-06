@@ -1,0 +1,13 @@
+<div class="well video">
+    <a href="{{ include.video-url }}">
+        <img src="{{ include.preview-url | prepend: site.baseurl }}" class="img-responsive" />
+    </a>
+    <h3>
+        <a href="{{ include.video-url }}">{{ include.video-title }}</a>
+    </h3>
+    <div class="author">
+        <a href="{{ include.author-url }}">
+            by {{ include.author-name }}
+        </a>
+    </div>
+</div>

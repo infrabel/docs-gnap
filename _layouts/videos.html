@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include head.html css="home.css" %}
+    {% include head.html css="videos.css" %}
     <body>
         <div class="topbar">
             <div class="container">
                 {% include topbar.html %}
             </div>
         </div>
-        {{ content }}
+        <div class="container">
+            {{ content }}
+        </div>
         <script type="text/javascript">
             window.jQuery || document.write("<script src='{{ "js/jquery.min.js" | prepend: site.themeurl }}'>"+"<"+"/script>");
         </script>
