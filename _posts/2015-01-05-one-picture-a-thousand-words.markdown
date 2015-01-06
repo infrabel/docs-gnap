@@ -3,7 +3,7 @@ layout: post
 title:  "One picture, a thousand words"
 date:   2015-01-05 12:00:00
 categories: gnap update
-excerpt: For the past couple of months we've been hard at work to get the first non-beta release of GNaP out the door. Finally we've reached that moment were we can confidently say that GNaP is ready for production use.
+excerpt: Some people like to read, others prefer watching someone explain it. 
 ---
 
 Some people like to read, others prefer watching someone explain it. We recently added a new **[videos](/videos)** section to our site, which will contain GNaP authored material, as well as contributions from the community and links to valuable resources.
