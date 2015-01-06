@@ -205,14 +205,16 @@ body {
     padding: 40px 0 40px 0;
 }
 
-.footer h2, .footer .post-list h3 a {
+.footer .logo-footer {
+    background-image: url(../images/logo-footer.png);
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
     color: #fff;
+    padding: 20px 0 20px 0;
 }
 
-.footer .post-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.footer .logo-footer a {
+    color: #fff;
 }
 
 .img-responsive {
