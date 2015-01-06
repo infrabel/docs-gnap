@@ -21,6 +21,5 @@
       <description>{{ post.content | xml_escape }}</description>
     </item>
     {% endfor %}
-
   </channel> 
 </rss>

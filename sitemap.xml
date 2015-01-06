@@ -1,3 +1,5 @@
+---
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -13,11 +15,17 @@
         <priority>1</priority>
     </url>
     <url>
-        <loc>http://gnap.io/releases</loc>
+        <loc>http://gnap.io/videos</loc>
         <priority>1</priority>
     </url>
     <url>
-        <loc>http://gnap.io/gnap/update/2014/12/24/introducing-gnap/</loc>
-        <priority>0.5</priority>
+        <loc>http://gnap.io/releases</loc>
+        <priority>1</priority>
     </url>
+    {% for post in site.posts %}
+        <url>
+            <loc>{{ post.url | prepend: site.url }}</loc>
+            <priority>0.5</priority>
+        </url>
+    {% endfor %}
 </urlset>
