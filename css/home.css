@@ -207,14 +207,22 @@ body {
 
 .footer .logo-footer {
     background-image: url(../images/logo-footer.png);
-    background-size: 64px 64px;
+    background-size: 84px 84px;
     background-repeat: no-repeat;
     color: #fff;
-    padding: 20px 0 20px 0;
+    padding: 5px 0 24px 110px;
 }
 
-.footer .logo-footer a {
+.footer a {
     color: #fff;
+}
+
+.footer .links {
+    margin-top: 15px;
+}
+
+.footer .links a {
+    color: #bbb;
 }
 
 .img-responsive {
