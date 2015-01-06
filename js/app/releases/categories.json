@@ -9,7 +9,11 @@
                 "url":"https://github.com/infrabel/generator-gnap",
                 "packages":[
                     {
-                        "npm":["generator-gnap"]
+                        "npm": 
+                            {
+                                "name": "generator-gnap",
+                                "global": true
+                            }
                     }
                 ]
             },
@@ -20,18 +24,30 @@
                 "packages":[
                     {
                         "title": "gnap-theme-gnap",
-                        "nuget": ["GNaP.Themes.Web.GNaP"],
-                        "npm": ["gnap-theme-gnap"]
+                        "nuget": "GNaP.Themes.Web.GNaP",
+                        "npm": 
+                            {
+                                "name": "gnap-theme-gnap",
+                                "global": false
+                            }
                     },
                     {
                         "title": "gnap-theme-gnap-angular",
-                        "nuget": ["GNaP.Themes.Web.GNaP.Angular"],
-                        "npm": ["gnap-theme-gnap-angular"]
+                        "nuget": "GNaP.Themes.Web.GNaP.Angular",
+                        "npm": 
+                            {
+                                "name": "gnap-theme-gnap-angular",
+                                "global": false
+                            }
                     },
                     {
                         "title": "gnap-theme-sample",
-                        "nuget": ["GNaP.Themes.Web.Sample"],
-                        "npm": ["gnap-theme-sample"]
+                        "nuget": "GNaP.Themes.Web.Sample",
+                        "npm": 
+                            {
+                                "name": "gnap-theme-sample",
+                                "global": false
+                            }
                     }
                 ]
             }
@@ -47,7 +63,7 @@
                 "url":"https://github.com/infrabel/GNaP.Common",
                 "packages":[
                     {
-                        "nuget":["GNaP.Common"]
+                        "nuget": "GNaP.Common"
                     }
                 ]
             },
@@ -57,7 +73,7 @@
                 "url":"https://github.com/infrabel/GNaP.DependencyInjection.StructureMap",
                 "packages":[
                     {
-                        "nuget":["GNaP.DependencyInjection.StructureMap"]
+                        "nuget": "GNaP.DependencyInjection.StructureMap"
                     }
                 ]
             },
@@ -67,7 +83,7 @@
                 "url":"https://github.com/infrabel/GNaP.DependencyInjection.Ninject",
                 "packages":[
                     {
-                        "nuget":["GNaP.DependencyInjection.Ninject"]
+                        "nuget": "GNaP.DependencyInjection.Ninject"
                     }
                 ]
             },
@@ -77,7 +93,7 @@
                 "url":"https://github.com/infrabel/GNaP.WebApi.Versioning",
                 "packages":[
                     {
-                        "nuget":["GNaP.WebApi.Versioning"]
+                        "nuget": "GNaP.WebApi.Versioning"
                     }
                 ]
             },
@@ -87,7 +103,7 @@
                 "url":"https://github.com/infrabel/GNaP.Owin.Authentication.Jwt",
                 "packages":[
                     {
-                        "nuget":["GNaP.Owin.Authentication.Jwt"]
+                        "nuget": "GNaP.Owin.Authentication.Jwt"
                     }
                 ]
             }
