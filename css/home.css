@@ -201,27 +201,26 @@ body {
 }
 
 .footer {
-    color: #fff;
-    padding: 40px 0 40px 0;
+    padding: 60px 0 40px 0;
 }
 
-.footer .logo-footer {
+.footer .footer-content {
     background-image: url(../images/logo-footer.png);
     background-size: 84px 84px;
     background-repeat: no-repeat;
     color: #fff;
-    padding: 5px 0 24px 110px;
+    padding: 0 0 30px 110px;
 }
 
-.footer a {
+.footer .footer-content a {
     color: #fff;
 }
 
-.footer .links {
+.footer .footer-content .links {
     margin-top: 15px;
 }
 
-.footer .links a {
+.footer .footer-content .links a {
     color: #bbb;
 }
 
