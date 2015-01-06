@@ -1,0 +1,32 @@
+---
+layout: videos
+title: Videos
+---
+
+<div class="container">
+    <div class="page-header">
+        <h1>{{ page.title }}</h1>
+    </div>
+    <p>
+        Don't like reading? Watch these videos to learn more about GNaP.
+    </p>
+
+    <div class="category">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Introduction</h2>
+                <p>Get to know GNaP</p>
+            </div>
+            <div class="col-md-8 col-md-offset-1">
+                <div class="row">
+                    <div class="col-sm-6">
+                        {% include video.html preview-url="images/videos/gnap-promotional-video.jpg" video-url="https://www.youtube.com/watch?v=2Skht0xWVRY" video-title="A GNaP Promotional Video" author-url="http://gnap.io" author-name="GNaP" %}
+                    </div>
+                    <div class="col-sm-6">
+                        {% include video.html preview-url="images/videos/why-use-gnap.jpg" video-url="https://www.youtube.com/watch?v=r33unxKC5mc" video-title="Why use GNaP?" author-url="http://gnap.io" author-name="GNaP" %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

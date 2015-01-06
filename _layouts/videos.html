@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% include head.html css="videos.css" %}
+    <body>
+        <div class="topbar">
+            <div class="container">
+                {% include topbar.html %}
+            </div>
+        </div>
+
+        <div class="container">
+            {{ content }}
+        </div>
+
+        <script type="text/javascript">
+            window.jQuery || document.write("<script src='{{ "js/jquery.min.js" | prepend: site.themeurl }}'>"+"<"+"/script>");
+        </script>
+        <script type="text/javascript">
+            if("ontouchend" in document) document.write("<script src='{{ "js/jquery.mobile.custom.min.js" | prepend: site.themeurl }}'>"+"<"+"/script>");
+        </script>
+        <script src="{{ "js/bootstrap.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/ace-elements.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/ace.min.js" | prepend: site.themeurl }}"></script>
+        <script src="{{ "js/layout.min.js" | prepend: site.themeurl }}"></script>
+    </body>
+</html>

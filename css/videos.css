@@ -1,0 +1,23 @@
+.category {
+    margin: 60px 0 60px 0;
+}
+
+.category h2 {
+    margin: 0 0 20px 0;
+}
+
+.category p {
+    margin: 0 0 20px 0;
+}
+
+.video {
+}
+
+.video h3 {
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.video h3 a {
+    color: #005CA3;
+}
