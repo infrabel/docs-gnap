@@ -31,21 +31,21 @@ title: Project Releases
                                         {[{ release.tag_name }]}
                                     </a>
                                 </h5>
-                                <a href="{[{ release.author.html_url }]}"><img src="{[{ release.author.avatar_url }]}" alt="{[{ release.author.login }]}" /> {[{ release.author.login }]}</a> released this <span am-time-ago="release.published_at"></span>
+                                <a href="{[{ release.author.html_url }]}"><img ng-src="{[{ release.author.avatar_url }]}" alt="{[{ release.author.login }]}" /> {[{ release.author.login }]}</a> released this <span am-time-ago="release.published_at"></span>
                             </div>
                         </div>
 
                         <div class="installation" ng-show="project.packages">
                             <div ng-show="project.packages.length == 1">
                                 <div ng-repeat="packageList in project.packages">
-                                    <div class="command-line" ng-repeat="package in packageList.nuget">
+                                    <div class="command-line" ng-show="packageList.nuget">
                                         <p>
-                                            <code>PM&gt; Install-Package {[{ package }]}</code>
+                                            <code>PM&gt; Install-Package {[{ packageList.nuget }]}</code>
                                         </p>
                                     </div>
-                                    <div class="command-line" ng-repeat="package in packageList.npm">
+                                    <div class="command-line" ng-show="packageList.npm">
                                         <p>
-                                            <code>npm install -g {[{ package }]}</code>
+                                            <code>npm install <span ng-show="packageList.npm.global">-g</span> {[{ packageList.npm.name }]}</code>
                                         </p>
                                     </div>
                                 </div>
@@ -53,14 +53,14 @@ title: Project Releases
                             <div ng-show="project.packages.length > 1">
                                 <tabset justified="true">
                                     <tab heading="{[{ packageList.title }]}" ng-repeat="packageList in project.packages">
-                                        <div class="command-line" ng-repeat="package in packageList.nuget">
+                                        <div class="command-line" ng-show="packageList.nuget">
                                             <p>
-                                                <code>PM&gt; Install-Package {[{ package }]}</code>
+                                                <code>PM&gt; Install-Package {[{ packageList.nuget }]}</code>
                                             </p>
                                         </div>
-                                        <div class="command-line" ng-repeat="package in packageList.npm">
+                                        <div class="command-line" ng-show="packageList.npm">
                                             <p>
-                                                <code>npm install -g {[{ package }]}</code>
+                                                <code>npm install <span ng-show="packageList.npm.global">-g</span> {[{ packageList.npm.name }]}</code>
                                             </p>
                                         </div>
                                     </tab>
