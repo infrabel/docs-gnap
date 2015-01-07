@@ -122,8 +122,23 @@ body {
     text-align: center;
 }
 
-.users .container {
-    border-top: 1px dotted #ccc;
+.example-site {
+    background-color: #fff;
+    padding: 60px 0 60px 0;
+}
+
+.example-site img {
+    border: 1px solid #CACACA;
+}
+
+@media only screen and (max-width: 992px ) {
+    .example-site {
+        text-align: center;
+    }
+
+    .example-site h2 {
+        margin-top: 30px;
+    }
 }
 
 .users h2 {
