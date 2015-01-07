@@ -122,8 +122,9 @@ body {
     text-align: center;
 }
 
-.users .container {
-    border-top: 1px dotted #ccc;
+.example {
+    background-color: #fff;
+    padding: 60px 0 60px 0;
 }
 
 .users h2 {
