@@ -9,7 +9,7 @@
                 "url":"https://github.com/infrabel/generator-gnap",
                 "packages":[
                     {
-                        "npm": 
+                        "npm":
                             {
                                 "name": "generator-gnap",
                                 "global": true
@@ -25,7 +25,7 @@
                     {
                         "title": "gnap-theme-gnap",
                         "nuget": "GNaP.Themes.Web.GNaP",
-                        "npm": 
+                        "npm":
                             {
                                 "name": "gnap-theme-gnap",
                                 "global": false
@@ -34,7 +34,7 @@
                     {
                         "title": "gnap-theme-gnap-angular",
                         "nuget": "GNaP.Themes.Web.GNaP.Angular",
-                        "npm": 
+                        "npm":
                             {
                                 "name": "gnap-theme-gnap-angular",
                                 "global": false
@@ -43,7 +43,7 @@
                     {
                         "title": "gnap-theme-sample",
                         "nuget": "GNaP.Themes.Web.Sample",
-                        "npm": 
+                        "npm":
                             {
                                 "name": "gnap-theme-sample",
                                 "global": false
@@ -104,6 +104,16 @@
                 "packages":[
                     {
                         "nuget": "GNaP.Owin.Authentication.Jwt"
+                    }
+                ]
+            },
+            {
+                "name":"GNaP.Data.Scope.EntityFramework",
+                "description":"A simple and flexible way to manage your Entity Framework DbContext instances.",
+                "url":"https://github.com/infrabel/GNaP.Data.Scope.EntityFramework",
+                "packages":[
+                    {
+                        "nuget": "GNaP.Data.Scope.EntityFramework"
                     }
                 ]
             }
