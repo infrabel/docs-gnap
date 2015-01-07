@@ -1,7 +1,7 @@
 [
      {
         "title":"Theme",
-        "description": "The packages that are used to build the default GNaP theme files.",
+        "description": "Packages used to build a GNaP based frontend.",
         "projects":[
             {
                 "name": "generator-gnap",
@@ -19,7 +19,7 @@
             },
             {
                 "name":"themes-gnap",
-                "description":"Standardized build to produce web themes for use with GNaP.",
+                "description":"Available GNaP generated themes.",
                 "url":"https://github.com/infrabel/themes-gnap",
                 "packages":[
                     {
@@ -121,7 +121,7 @@
      },
      {
         "title":"Servers",
-        "description": "Stand-alone servers",
+        "description": "Stand-alone servers.",
         "projects":[
             {
                 "name":"wiki-gnap"
