@@ -124,7 +124,9 @@
         "description": "Stand-alone servers.",
         "projects":[
             {
-                "name":"wiki-gnap"
+                "name":"wiki-gnap",
+                "description":"Preconfigured DokuWiki instance using GNaP theme and common plugins.",
+                "url":"https://github.com/infrabel/wiki-gnap"
             }
         ]
      }
