@@ -116,6 +116,16 @@
                         "nuget": "GNaP.Data.Scope.EntityFramework"
                     }
                 ]
+            },
+            {
+              "name":"GNaP.Data.Scope.NHibernate",
+              "description":"A simple and flexible way to manage your NHibernate ISession instances.",
+              "url":"https://github.com/infrabel/GNaP.Data.Scope.NHibernate",
+              "packages":[
+                {
+                  "nuget": "GNaP.Data.Scope.NHibernate"
+                }
+              ]
             }
         ]
      },
