@@ -25,7 +25,7 @@ Adding a state includes creating a state file, controller and view. We have incl
 Start by invoking *yo* like this:
 
 {% highlight text %}
-yo gnap-angular:state main.todos
+yo gnap:state main.todos
 {% endhighlight %}
 
 Next the generator will prompt you to enter the url of your state. This is the url that the users of your application will visit to view your state. You can leave this blank if you're happy with the proposed url. Press enter to confirm your input.
