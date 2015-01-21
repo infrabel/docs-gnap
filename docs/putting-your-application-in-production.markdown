@@ -13,7 +13,7 @@ themes-gnap comes with tooling to build your application so that it's ready for 
 Execute the following command in a command prompt that is opened at the root of your application:
 
 ```
-grunt build
+grunt dist
 ```
 
 After this task has completed you should see a new folder named `dist`.
